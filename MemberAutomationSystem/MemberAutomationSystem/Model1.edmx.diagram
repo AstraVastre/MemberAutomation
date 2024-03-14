@@ -4,21 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="012ac2a5e35a45deb1d35ce7b84ecf32" Name="Diagram1" ZoomLevel="64">
-        <EntityTypeShape EntityType="dbEntities.authority" Width="1.5" PointX="5.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEntities.authorityMembers" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEntities.check_In_Out" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEntities.excuse" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEntities.Log" Width="1.5" PointX="10.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEntities.logType" Width="1.5" PointX="8" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEntities.members" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEntities.Months" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbEntities.sysdiagrams" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
-        <AssociationConnector Association="dbEntities.FK_authorityMembers_authority" ManuallyRouted="false" />
-        <AssociationConnector Association="dbEntities.FK_Log_authorityMembers" ManuallyRouted="false" />
-        <AssociationConnector Association="dbEntities.FK_check_In_Out_members" ManuallyRouted="false" />
-        <AssociationConnector Association="dbEntities.FK_excuse_members" ManuallyRouted="false" />
-        <AssociationConnector Association="dbEntities.FK_Log_logType" ManuallyRouted="false" />
+      <Diagram DiagramId="a292c23b72f745d8afa3b7fdbb6fe74f" Name="Diagram1">
+        <EntityTypeShape EntityType="MemberAutomationModel.authority" Width="1.5" PointX="5.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MemberAutomationModel.authorityMembers" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MemberAutomationModel.check_In_Out" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MemberAutomationModel.excuse" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MemberAutomationModel.Log" Width="1.5" PointX="10.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MemberAutomationModel.logType" Width="1.5" PointX="8" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MemberAutomationModel.members" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MemberAutomationModel.Months" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MemberAutomationModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="MemberAutomationModel.FK_authorityMembers_authority" ManuallyRouted="false" />
+        <AssociationConnector Association="MemberAutomationModel.FK_Log_authorityMembers" ManuallyRouted="false" />
+        <AssociationConnector Association="MemberAutomationModel.FK_check_In_Out_members" ManuallyRouted="false" />
+        <AssociationConnector Association="MemberAutomationModel.FK_excuse_members" ManuallyRouted="false" />
+        <AssociationConnector Association="MemberAutomationModel.FK_Log_logType" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

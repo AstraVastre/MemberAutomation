@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbEntities.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="MemberAutomationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="authority">
           <Key>
             <PropertyRef Name="authority_Id" />
@@ -147,7 +147,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="dbEntitiesStoreContainer">
+        <EntityContainer Name="MemberAutomationModelStoreContainer">
           <EntitySet Name="authority" EntityType="Self.authority" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="authorityMembers" EntityType="Self.authorityMembers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="check_In_Out" EntityType="Self.check_In_Out" Schema="dbo" store:Type="Tables" />
@@ -182,7 +182,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="dbEntities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="MemberAutomationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="authority">
           <Key>
             <PropertyRef Name="authority_Id" />
@@ -371,9 +371,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="dbEntitiesStoreContainer" CdmEntityContainer="MemberAutomationEntities">
+        <EntityContainerMapping StorageEntityContainer="MemberAutomationModelStoreContainer" CdmEntityContainer="MemberAutomationEntities">
           <EntitySetMapping Name="authority">
-            <EntityTypeMapping TypeName="dbEntities.authority">
+            <EntityTypeMapping TypeName="MemberAutomationModel.authority">
               <MappingFragment StoreEntitySet="authority">
                 <ScalarProperty Name="authority_Id" ColumnName="authority_Id" />
                 <ScalarProperty Name="authority_Type" ColumnName="authority_Type" />
@@ -381,7 +381,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="authorityMembers">
-            <EntityTypeMapping TypeName="dbEntities.authorityMembers">
+            <EntityTypeMapping TypeName="MemberAutomationModel.authorityMembers">
               <MappingFragment StoreEntitySet="authorityMembers">
                 <ScalarProperty Name="authority_member_Id" ColumnName="authority_member_Id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -392,7 +392,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="check_In_Out">
-            <EntityTypeMapping TypeName="dbEntities.check_In_Out">
+            <EntityTypeMapping TypeName="MemberAutomationModel.check_In_Out">
               <MappingFragment StoreEntitySet="check_In_Out">
                 <ScalarProperty Name="check_In_Out_Id" ColumnName="check_In_Out_Id" />
                 <ScalarProperty Name="member_Id" ColumnName="member_Id" />
@@ -404,7 +404,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="excuse">
-            <EntityTypeMapping TypeName="dbEntities.excuse">
+            <EntityTypeMapping TypeName="MemberAutomationModel.excuse">
               <MappingFragment StoreEntitySet="excuse">
                 <ScalarProperty Name="excuse_Id" ColumnName="excuse_Id" />
                 <ScalarProperty Name="member_Id" ColumnName="member_Id" />
@@ -414,7 +414,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Log">
-            <EntityTypeMapping TypeName="dbEntities.Log">
+            <EntityTypeMapping TypeName="MemberAutomationModel.Log">
               <MappingFragment StoreEntitySet="Log">
                 <ScalarProperty Name="log_Id" ColumnName="log_Id" />
                 <ScalarProperty Name="log_Type_Id" ColumnName="log_Type_Id" />
@@ -425,7 +425,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="logType">
-            <EntityTypeMapping TypeName="dbEntities.logType">
+            <EntityTypeMapping TypeName="MemberAutomationModel.logType">
               <MappingFragment StoreEntitySet="logType">
                 <ScalarProperty Name="log_Type_Id" ColumnName="log_Type_Id" />
                 <ScalarProperty Name="Log_Type" ColumnName="Log_Type" />
@@ -433,7 +433,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="members">
-            <EntityTypeMapping TypeName="dbEntities.members">
+            <EntityTypeMapping TypeName="MemberAutomationModel.members">
               <MappingFragment StoreEntitySet="members">
                 <ScalarProperty Name="member_Id" ColumnName="member_Id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -445,7 +445,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Months">
-            <EntityTypeMapping TypeName="dbEntities.Months">
+            <EntityTypeMapping TypeName="MemberAutomationModel.Months">
               <MappingFragment StoreEntitySet="Months">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Months1" ColumnName="Months" />
@@ -453,7 +453,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="dbEntities.sysdiagrams">
+            <EntityTypeMapping TypeName="MemberAutomationModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />

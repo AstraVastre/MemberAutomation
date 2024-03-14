@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MemberAutomationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="authority">
+    <Key>
+      <PropertyRef Name="authority_Id" />
+    </Key>
+    <Property Name="authority_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="authority_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="authorityMembers" Relationship="Self.FK_authorityMembers_authority" FromRole="authority" ToRole="authorityMembers" />
+  </EntityType>
+  <EntityType Name="authorityMembers">
+    <Key>
+      <PropertyRef Name="authority_member_Id" />
+    </Key>
+    <Property Name="authority_member_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="authority_type_Id" Type="Int32" />
+    <NavigationProperty Name="authority" Relationship="Self.FK_authorityMembers_authority" FromRole="authorityMembers" ToRole="authority" />
+    <NavigationProperty Name="Log" Relationship="Self.FK_Log_authorityMembers" FromRole="authorityMembers" ToRole="Log" />
+  </EntityType>
+  <EntityType Name="check_In_Out">
+    <Key>
+      <PropertyRef Name="check_In_Out_Id" />
+    </Key>
+    <Property Name="check_In_Out_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="member_Id" Type="Int32" />
+    <Property Name="check_In_Date" Type="DateTime" Precision="3" />
+    <Property Name="check_Out_Date" Type="DateTime" Precision="3" />
+    <Property Name="lunch_break" Type="DateTime" Precision="3" />
+    <Property Name="lunch_break_End" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="members" Relationship="Self.FK_check_In_Out_members" FromRole="check_In_Out" ToRole="members" />
+  </EntityType>
+  <EntityType Name="excuse">
+    <Key>
+      <PropertyRef Name="excuse_Id" />
+    </Key>
+    <Property Name="excuse_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="member_Id" Type="Int32" />
+    <Property Name="excuse_Date" Type="DateTime" Precision="3" />
+    <Property Name="excuse_Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="members" Relationship="Self.FK_excuse_members" FromRole="excuse" ToRole="members" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="log_Id" />
+    </Key>
+    <Property Name="log_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="log_Type_Id" Type="Int32" />
+    <Property Name="log_Date" Type="DateTime" Precision="3" />
+    <Property Name="log_authority_Id" Type="Int32" />
+    <Property Name="log_Detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="authorityMembers" Relationship="Self.FK_Log_authorityMembers" FromRole="Log" ToRole="authorityMembers" />
+    <NavigationProperty Name="logType" Relationship="Self.FK_Log_logType" FromRole="Log" ToRole="logType" />
+  </EntityType>
+  <EntityType Name="logType">
+    <Key>
+      <PropertyRef Name="log_Type_Id" />
+    </Key>
+    <Property Name="log_Type_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Log_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Log" Relationship="Self.FK_Log_logType" FromRole="logType" ToRole="Log" />
+  </EntityType>
+  <EntityType Name="members">
+    <Key>
+      <PropertyRef Name="member_Id" />
+    </Key>
+    <Property Name="member_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_Of_Birth" Type="DateTime" Precision="3" />
+    <Property Name="is_Active" Type="Boolean" />
+    <NavigationProperty Name="check_In_Out" Relationship="Self.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
+    <NavigationProperty Name="excuse" Relationship="Self.FK_excuse_members" FromRole="members" ToRole="excuse" />
+  </EntityType>
+  <EntityType Name="Months">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Months1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_authorityMembers_authority">
+    <End Role="authority" Type="Self.authority" Multiplicity="0..1" />
+    <End Role="authorityMembers" Type="Self.authorityMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="authority">
+        <PropertyRef Name="authority_Id" />
+      </Principal>
+      <Dependent Role="authorityMembers">
+        <PropertyRef Name="authority_type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Log_authorityMembers">
+    <End Role="authorityMembers" Type="Self.authorityMembers" Multiplicity="0..1" />
+    <End Role="Log" Type="Self.Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="authorityMembers">
+        <PropertyRef Name="authority_member_Id" />
+      </Principal>
+      <Dependent Role="Log">
+        <PropertyRef Name="log_authority_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_check_In_Out_members">
+    <End Role="members" Type="Self.members" Multiplicity="0..1" />
+    <End Role="check_In_Out" Type="Self.check_In_Out" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="member_Id" />
+      </Principal>
+      <Dependent Role="check_In_Out">
+        <PropertyRef Name="member_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_excuse_members">
+    <End Role="members" Type="Self.members" Multiplicity="0..1" />
+    <End Role="excuse" Type="Self.excuse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="members">
+        <PropertyRef Name="member_Id" />
+      </Principal>
+      <Dependent Role="excuse">
+        <PropertyRef Name="member_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Log_logType">
+    <End Role="logType" Type="Self.logType" Multiplicity="0..1" />
+    <End Role="Log" Type="Self.Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="logType">
+        <PropertyRef Name="log_Type_Id" />
+      </Principal>
+      <Dependent Role="Log">
+        <PropertyRef Name="log_Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MemberAutomationEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="authority" EntityType="Self.authority" />
+    <EntitySet Name="authorityMembers" EntityType="Self.authorityMembers" />
+    <EntitySet Name="check_In_Out" EntityType="Self.check_In_Out" />
+    <EntitySet Name="excuse" EntityType="Self.excuse" />
+    <EntitySet Name="Log" EntityType="Self.Log" />
+    <EntitySet Name="logType" EntityType="Self.logType" />
+    <EntitySet Name="members" EntityType="Self.members" />
+    <EntitySet Name="Months" EntityType="Self.Months" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_authorityMembers_authority" Association="Self.FK_authorityMembers_authority">
+      <End Role="authority" EntitySet="authority" />
+      <End Role="authorityMembers" EntitySet="authorityMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Log_authorityMembers" Association="Self.FK_Log_authorityMembers">
+      <End Role="authorityMembers" EntitySet="authorityMembers" />
+      <End Role="Log" EntitySet="Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_check_In_Out_members" Association="Self.FK_check_In_Out_members">
+      <End Role="members" EntitySet="members" />
+      <End Role="check_In_Out" EntitySet="check_In_Out" />
+    </AssociationSet>
+    <AssociationSet Name="FK_excuse_members" Association="Self.FK_excuse_members">
+      <End Role="members" EntitySet="members" />
+      <End Role="excuse" EntitySet="excuse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Log_logType" Association="Self.FK_Log_logType">
+      <End Role="logType" EntitySet="logType" />
+      <End Role="Log" EntitySet="Log" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
