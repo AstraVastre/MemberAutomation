@@ -17,10 +17,8 @@ namespace MemberAutomationSystem
         public int log_Id { get; set; }
         public Nullable<int> log_Type_Id { get; set; }
         public Nullable<System.DateTime> log_Date { get; set; }
-        public Nullable<int> log_authority_Id { get; set; }
         public string log_Detail { get; set; }
     
-        public virtual authorityMembers authorityMembers { get; set; }
         public virtual logType logType { get; set; }
     }
 }

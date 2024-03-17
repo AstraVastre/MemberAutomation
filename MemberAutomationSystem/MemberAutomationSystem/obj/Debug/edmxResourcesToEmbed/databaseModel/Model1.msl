@@ -4,90 +4,91 @@
     <EntitySetMapping Name="authority">
       <EntityTypeMapping TypeName="MemberAutomationModel.authority">
         <MappingFragment StoreEntitySet="authority">
-          <ScalarProperty Name="authority_Type" ColumnName="authority_Type" />
           <ScalarProperty Name="authority_Id" ColumnName="authority_Id" />
+          <ScalarProperty Name="authority_Type" ColumnName="authority_Type" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="authorityMembers">
       <EntityTypeMapping TypeName="MemberAutomationModel.authorityMembers">
         <MappingFragment StoreEntitySet="authorityMembers">
-          <ScalarProperty Name="authority_type_Id" ColumnName="authority_type_Id" />
-          <ScalarProperty Name="Tc_No" ColumnName="Tc_No" />
-          <ScalarProperty Name="surname" ColumnName="surname" />
-          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="authority_member_Id" ColumnName="authority_member_Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="Tc_No" ColumnName="Tc_No" />
+          <ScalarProperty Name="authority_type_Id" ColumnName="authority_type_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="check_In_Out">
       <EntityTypeMapping TypeName="MemberAutomationModel.check_In_Out">
         <MappingFragment StoreEntitySet="check_In_Out">
-          <ScalarProperty Name="lunch_break_End" ColumnName="lunch_break_End" />
-          <ScalarProperty Name="lunch_break" ColumnName="lunch_break" />
-          <ScalarProperty Name="check_Out_Date" ColumnName="check_Out_Date" />
-          <ScalarProperty Name="check_In_Date" ColumnName="check_In_Date" />
-          <ScalarProperty Name="member_Id" ColumnName="member_Id" />
           <ScalarProperty Name="check_In_Out_Id" ColumnName="check_In_Out_Id" />
+          <ScalarProperty Name="member_Id" ColumnName="member_Id" />
+          <ScalarProperty Name="check_In_Date" ColumnName="check_In_Date" />
+          <ScalarProperty Name="check_Out_Date" ColumnName="check_Out_Date" />
+          <ScalarProperty Name="lunch_break" ColumnName="lunch_break" />
+          <ScalarProperty Name="lunch_break_End" ColumnName="lunch_break_End" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="excuse">
       <EntityTypeMapping TypeName="MemberAutomationModel.excuse">
         <MappingFragment StoreEntitySet="excuse">
-          <ScalarProperty Name="excuse_Text" ColumnName="excuse_Text" />
-          <ScalarProperty Name="excuse_Date" ColumnName="excuse_Date" />
-          <ScalarProperty Name="member_Id" ColumnName="member_Id" />
           <ScalarProperty Name="excuse_Id" ColumnName="excuse_Id" />
+          <ScalarProperty Name="member_Id" ColumnName="member_Id" />
+          <ScalarProperty Name="excuse_Date" ColumnName="excuse_Date" />
+          <ScalarProperty Name="excuse_Text" ColumnName="excuse_Text" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Log">
       <EntityTypeMapping TypeName="MemberAutomationModel.Log">
         <MappingFragment StoreEntitySet="Log">
-          <ScalarProperty Name="log_Detail" ColumnName="log_Detail" />
-          <ScalarProperty Name="log_Date" ColumnName="log_Date" />
-          <ScalarProperty Name="log_Type_Id" ColumnName="log_Type_Id" />
           <ScalarProperty Name="log_Id" ColumnName="log_Id" />
+          <ScalarProperty Name="log_Type_Id" ColumnName="log_Type_Id" />
+          <ScalarProperty Name="log_Date" ColumnName="log_Date" />
+          <ScalarProperty Name="log_authority_Id" ColumnName="log_authority_Id" />
+          <ScalarProperty Name="log_Detail" ColumnName="log_Detail" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="logType">
       <EntityTypeMapping TypeName="MemberAutomationModel.logType">
         <MappingFragment StoreEntitySet="logType">
-          <ScalarProperty Name="Log_Type" ColumnName="Log_Type" />
           <ScalarProperty Name="log_Type_Id" ColumnName="log_Type_Id" />
+          <ScalarProperty Name="Log_Type" ColumnName="Log_Type" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="members">
       <EntityTypeMapping TypeName="MemberAutomationModel.members">
         <MappingFragment StoreEntitySet="members">
-          <ScalarProperty Name="is_Active" ColumnName="is_Active" />
-          <ScalarProperty Name="date_Of_Birth" ColumnName="date_Of_Birth" />
-          <ScalarProperty Name="Tc_No" ColumnName="Tc_No" />
-          <ScalarProperty Name="surname" ColumnName="surname" />
-          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="member_Id" ColumnName="member_Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="Tc_No" ColumnName="Tc_No" />
+          <ScalarProperty Name="date_Of_Birth" ColumnName="date_Of_Birth" />
+          <ScalarProperty Name="is_Active" ColumnName="is_Active" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Months">
       <EntityTypeMapping TypeName="MemberAutomationModel.Months">
         <MappingFragment StoreEntitySet="Months">
-          <ScalarProperty Name="Months1" ColumnName="Months" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Months1" ColumnName="Months" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="MemberAutomationModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="definition" ColumnName="definition" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
           <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -2,28 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
 namespace MemberAutomationSystem
 {
     public class transactions
     {
+
         MemberAutomationEntities db = new MemberAutomationEntities();
+        
 
         public bool memberRegistration(string name, string surname, string TcNo, DateTime doBirth)
         {
-            
             try
             {
-                
                 members members = new members();
                 members.name = name;
                 members.surname = surname;
                 members.Tc_No = TcNo;
                 members.date_Of_Birth = doBirth;
-                db.members.Add(members);
-                db.SaveChanges();
-                return true;
-
+                members.is_Active = true;
+                try
+                {
+                    db.members.Add(members);
+                    db.SaveChanges();
+                    return true;
+                }
+                catch (Exception e)
+                {
+                   Console.WriteLine(e.Message);
+                    return false;
+                }
             }
             catch (Exception e) { return false; }
         }
@@ -34,9 +41,11 @@ namespace MemberAutomationSystem
             {
                 members members = new members();
                 var member = db.members.SingleOrDefault(x => x.Tc_No == TcNo);
-                return member != null;
+                if (member != null) return true; else return false;
             }
-            catch (Exception e) { return false; }
+            catch (Exception e) {
+                Console.WriteLine(e.Message);
+                return false; }
 
         }
 
@@ -54,7 +63,9 @@ namespace MemberAutomationSystem
                 return false;
 
             }
-            catch (Exception e) { return false; }
+            catch (Exception e) { return false;
+                Console.WriteLine(e.Message);
+            }
         }
 
         public bool memberUpdate(int memberId, string name, string surname, string TcNo, DateTime doBirth)
@@ -75,7 +86,12 @@ namespace MemberAutomationSystem
                 }
                 return false;
             }
-            catch (Exception e) { return false; }
+            catch (Exception e) { return false;
+                Console.WriteLine(e.Message);
+            }
         }
+        
+       
+        
     }
 }

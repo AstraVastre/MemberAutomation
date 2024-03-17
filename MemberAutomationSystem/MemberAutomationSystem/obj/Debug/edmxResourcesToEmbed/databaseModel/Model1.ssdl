@@ -44,6 +44,7 @@
     <Property Name="log_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="log_Type_Id" Type="int" />
     <Property Name="log_Date" Type="datetime" />
+    <Property Name="log_authority_Id" Type="int" />
     <Property Name="log_Detail" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="logType">
@@ -61,7 +62,7 @@
     <Property Name="name" Type="varchar" MaxLength="50" />
     <Property Name="surname" Type="varchar" MaxLength="50" />
     <Property Name="Tc_No" Type="varchar" MaxLength="50" />
-    <Property Name="date_Of_Birth" Type="date" />
+    <Property Name="date_Of_Birth" Type="datetime" />
     <Property Name="is_Active" Type="bit" />
   </EntityType>
   <EntityType Name="Months">
@@ -117,6 +118,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Log_authorityMembers">
+    <End Role="authorityMembers" Type="Self.authorityMembers" Multiplicity="0..1" />
+    <End Role="Log" Type="Self.Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="authorityMembers">
+        <PropertyRef Name="authority_member_Id" />
+      </Principal>
+      <Dependent Role="Log">
+        <PropertyRef Name="log_authority_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Log_logType">
     <End Role="logType" Type="Self.logType" Multiplicity="0..1" />
     <End Role="Log" Type="Self.Log" Multiplicity="*" />
@@ -150,6 +163,10 @@
     <AssociationSet Name="FK_excuse_members" Association="Self.FK_excuse_members">
       <End Role="members" EntitySet="members" />
       <End Role="excuse" EntitySet="excuse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Log_authorityMembers" Association="Self.FK_Log_authorityMembers">
+      <End Role="authorityMembers" EntitySet="authorityMembers" />
+      <End Role="Log" EntitySet="Log" />
     </AssociationSet>
     <AssociationSet Name="FK_Log_logType" Association="Self.FK_Log_logType">
       <End Role="logType" EntitySet="logType" />

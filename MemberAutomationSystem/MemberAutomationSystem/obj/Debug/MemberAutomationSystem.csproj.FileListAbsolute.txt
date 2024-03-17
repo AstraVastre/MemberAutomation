@@ -57,6 +57,8 @@ C:\Users\astra\source\repos\MemberAutomationSystem\MemberAutomationSystem\obj\De
 C:\Users\astra\source\repos\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.csproj.CopyComplete
 C:\Users\astra\source\repos\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.dll
 C:\Users\astra\source\repos\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.pdb
+C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.csproj.CoreCompileInputs.cache
+C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.csproj.AssemblyReference.cache
 C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\bin\MemberAutomationSystem.dll.config
 C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\bin\MemberAutomationSystem.dll
 C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\bin\MemberAutomationSystem.pdb
@@ -115,8 +117,6 @@ C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\
 C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\bin\EntityFramework.xml
 C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\bin\EntityFramework.SqlServer.xml
 C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.csproj.AssemblyReference.cache
-C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.csproj.CoreCompileInputs.cache
 C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.csproj.CopyComplete
 C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.dll
 C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.pdb

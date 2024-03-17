@@ -14,12 +14,6 @@ namespace MemberAutomationSystem
     
     public partial class authorityMembers
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public authorityMembers()
-        {
-            this.Log = new HashSet<Log>();
-        }
-    
         public int authority_member_Id { get; set; }
         public string name { get; set; }
         public string surname { get; set; }
@@ -27,7 +21,5 @@ namespace MemberAutomationSystem
         public Nullable<int> authority_type_Id { get; set; }
     
         public virtual authority authority { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Log> Log { get; set; }
     }
 }

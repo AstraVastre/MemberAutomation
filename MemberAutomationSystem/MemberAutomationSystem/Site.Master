@@ -19,7 +19,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-
+    <asp:ContentPlaceHolder ID="ContentHeader" runat="server"></asp:ContentPlaceHolder>
     <title>The Seo Company Free Html Template</title>
 </head>
 <body>
@@ -57,7 +57,7 @@
   <!-- H E R O -->
   <section id="hero">
     <div class="container">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentBody" runat="server"></asp:ContentPlaceHolder>
       </div>
     </div>
   </section>

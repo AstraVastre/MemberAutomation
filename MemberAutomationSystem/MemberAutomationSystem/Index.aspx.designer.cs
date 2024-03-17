@@ -8,9 +8,9 @@
 //------------------------------------------------------------------------------
 
 
-namespace MemberAutomationSystem
+namespace MemberAutomationSystem.Pages
 {
-    public partial class Index
+    public partial class index
     {
     }
 }

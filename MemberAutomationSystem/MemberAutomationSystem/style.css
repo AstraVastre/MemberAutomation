@@ -1,69 +1,42 @@
-/*///////////////////////////////////////////////////////////////////////////////////
 
-	Theme Name: Seo Company
-	Description: The Seo Company v1.0
-	Author: Diego Velázquez Rabasa - Templune
-	Author Personal Website: http://templune.com
-	Author Behance Profile: https://www.behance.net/diegovr7
-	Author Dribbble Profile: https://dribbble.com/diegovr7
-	Author Envato Profile: https://themeforest.net/user/diegovr7
-	Version: 1.0
-
-	External Resources:
-	Bootstrap 4
-	Google Fonts 
-	Ionic Icons
-
-	*This Html Theme is royalty free for use in personal and commercial projects with 
-	a couple of restrictions.
-
-	Publications
-	You are welcome to republish this Html Theme on condition that you link back to
-	https://www.behance.net/gallery/67279127/The-Seo-Company-Free-PSD-Template 
-	and you should not provide the assets for direct download from your website.
-
-	Prohibitions
-	You do not have rights to redistribute, resell, lease, license, sub-license or offer
-	this resource to any third party «as is». If you want to use this resource as a part
-	of a product intended to be sold via any marketplace, please contact the author 
-	templune@gmail.com of the freebie to get an extended license.
-
-/////////////////////////////////////////////////////////////////////////////////*/
-
-/* /////////////////////////////
-
-	1. Basic Styles
-	2. Navbar
-	3. Buttons
-	4. Hero
-	5. Marketing
-	6. Testimonials
-	7. Pricing
-	8. Call to Action
-	9. Footer
-	10. Media Queries
-
-   //////////////////////////*/
 
 
 body {
 	font-family: 'Roboto', sans-serif;
 	color: #3a3f52;
 }
+h4 {
+	text-align: center;
+	color: cornflowerblue;
+	margin-bottom: 35px
+}
 
 h2 {
 	font-size: 44px;
 	font-weight: 700;
 }
+ul {
+	text-align: center;
+	padding-left: 0;
+}
 
+ul li {
+margin-bottom: 20px;
+}
+	
 h3 {
 	font-size: 24px;
 	font-weight: 500;
 	margin-bottom: 25px;
+	text-align:center;
+	color:rebeccapurple;
 }
+
 
 h5 {
 	font-size: 16px;
+	text-align:center;
+	
 }
 
 p {
@@ -366,6 +339,7 @@ section {
 	box-shadow: 0 0 1px 0 rgba(0,12,32,0.04), 0 10px 16px 0 rgba(10,31,68,0.06);
 	margin-top: 30px;
 }
+
 
 .pricing-box h3 {
 	font-size: 22px;
