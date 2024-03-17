@@ -18,7 +18,6 @@ namespace MemberAutomationSystem.Pages
 
         protected void btn_save_Click(object sender, EventArgs e)
         {
-
             //Kayıt işlemleri
             transactions transactions = new transactions();
 
@@ -38,6 +37,8 @@ namespace MemberAutomationSystem.Pages
                 string tc = txt_tcno.Text.Trim();
                 DateTime doBirth = DateTime.Parse(txt_doBirth.Text);  
                lbl_warning.Visible = false;
+
+                // aynı tc ile kayıt var mı
                 var control = transactions.memberControl(tc);
                 if (control==false) {
                     try
