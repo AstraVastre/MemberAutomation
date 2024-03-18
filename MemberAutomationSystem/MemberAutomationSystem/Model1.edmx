@@ -173,7 +173,7 @@
           <EntitySet Name="Log" EntityType="MemberAutomationModel.Log" />
           <EntitySet Name="logType" EntityType="MemberAutomationModel.logType" />
           <EntitySet Name="members" EntityType="MemberAutomationModel.members" />
-          <EntitySet Name="Months" EntityType="MemberAutomationModel.Months" />
+          <EntitySet Name="Months" EntityType="MemberAutomationModel.x" />
           <EntitySet Name="sysdiagrams" EntityType="MemberAutomationModel.sysdiagrams" />
           <AssociationSet Name="FK_authorityMembers_authority" Association="MemberAutomationModel.FK_authorityMembers_authority">
             <End Role="authority" EntitySet="authority" />
@@ -264,7 +264,7 @@
           <NavigationProperty Name="check_In_Out" Relationship="MemberAutomationModel.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
           <NavigationProperty Name="excuse" Relationship="MemberAutomationModel.FK_excuse_members" FromRole="members" ToRole="excuse" />
         </EntityType>
-        <EntityType Name="Months">
+        <EntityType Name="x">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -407,7 +407,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Months">
-            <EntityTypeMapping TypeName="MemberAutomationModel.Months">
+            <EntityTypeMapping TypeName="MemberAutomationModel.x">
               <MappingFragment StoreEntitySet="Months">
                 <ScalarProperty Name="Months1" ColumnName="Months" />
                 <ScalarProperty Name="id" ColumnName="id" />

@@ -12,7 +12,7 @@ namespace MemberAutomationSystem
     using System;
     using System.Collections.Generic;
     
-    public partial class Months
+    public partial class x
     {
         public int id { get; set; }
         public string Months1 { get; set; }
