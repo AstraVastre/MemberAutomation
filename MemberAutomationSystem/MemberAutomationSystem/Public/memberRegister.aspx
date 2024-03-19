@@ -40,13 +40,11 @@
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                <asp:BoundField DataField="member_Id" HeaderText="member_Id" SortExpression="member_Id" />
-                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
-                <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname" />
-                <asp:BoundField DataField="Tc_No" HeaderText="Tc_No" SortExpression="Tc_No" />
-                <asp:BoundField DataField="date_Of_Birth" HeaderText="date_Of_Birth" SortExpression="date_Of_Birth" />
-                <asp:CheckBoxField DataField="is_Active" HeaderText="is_Active" SortExpression="is_Active" />
-                <asp:BoundField DataField="member_No" HeaderText="member_No" SortExpression="member_No" />
+                <asp:BoundField DataField="member_No" HeaderText="Personel Numarası" SortExpression="member_No" ReadOnly="True" />
+                <asp:BoundField DataField="name" HeaderText="Adı" SortExpression="name" />
+                <asp:BoundField DataField="surname" HeaderText="Soyadı" SortExpression="surname" />
+                <asp:BoundField DataField="Tc_No" HeaderText="Tc No" SortExpression="Tc_No" />
+                <asp:BoundField DataField="date_Of_Birth" HeaderText="Doğum Tarihi" SortExpression="date_Of_Birth" />
             </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
