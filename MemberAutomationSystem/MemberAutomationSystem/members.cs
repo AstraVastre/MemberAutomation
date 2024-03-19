@@ -25,7 +25,7 @@ namespace MemberAutomationSystem
         public string name { get; set; }
         public string surname { get; set; }
         public string Tc_No { get; set; }
-        public Nullable<System.DateTime> date_Of_Birth { get; set; }
+        public string date_Of_Birth { get; set; }
         public Nullable<bool> is_Active { get; set; }
         public string member_No { get; set; }
     

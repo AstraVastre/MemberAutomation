@@ -66,7 +66,7 @@
           <Property Name="name" Type="varchar" MaxLength="50" />
           <Property Name="surname" Type="varchar" MaxLength="50" />
           <Property Name="Tc_No" Type="varchar" MaxLength="50" />
-          <Property Name="date_Of_Birth" Type="date" />
+          <Property Name="date_Of_Birth" Type="varchar(max)" />
           <Property Name="is_Active" Type="bit" />
           <Property Name="member_No" Type="varchar(max)" />
         </EntityType>
@@ -174,7 +174,7 @@
           <EntitySet Name="Log" EntityType="MemberAutomationModel.Log" />
           <EntitySet Name="logType" EntityType="MemberAutomationModel.logType" />
           <EntitySet Name="members" EntityType="MemberAutomationModel.members" />
-          <EntitySet Name="Months" EntityType="MemberAutomationModel.x" />
+          <EntitySet Name="Months" EntityType="MemberAutomationModel.Months" />
           <EntitySet Name="sysdiagrams" EntityType="MemberAutomationModel.sysdiagrams" />
           <AssociationSet Name="FK_authorityMembers_authority" Association="MemberAutomationModel.FK_authorityMembers_authority">
             <End Role="authority" EntitySet="authority" />
@@ -260,13 +260,13 @@
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="date_Of_Birth" Type="DateTime" Precision="0" />
+          <Property Name="date_Of_Birth" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="is_Active" Type="Boolean" />
+          <Property Name="member_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="check_In_Out" Relationship="MemberAutomationModel.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
           <NavigationProperty Name="excuse" Relationship="MemberAutomationModel.FK_excuse_members" FromRole="members" ToRole="excuse" />
-          <Property Name="member_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="x">
+        <EntityType Name="Months">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -331,7 +331,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -410,7 +410,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Months">
-            <EntityTypeMapping TypeName="MemberAutomationModel.x">
+            <EntityTypeMapping TypeName="MemberAutomationModel.Months">
               <MappingFragment StoreEntitySet="Months">
                 <ScalarProperty Name="Months1" ColumnName="Months" />
                 <ScalarProperty Name="id" ColumnName="id" />

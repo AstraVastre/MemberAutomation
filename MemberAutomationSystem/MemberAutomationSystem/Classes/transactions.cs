@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 namespace MemberAutomationSystem
@@ -10,14 +11,15 @@ namespace MemberAutomationSystem
         MemberAutomationEntities db = new MemberAutomationEntities();
 
 
-        public bool memberRegistration(string name, string surname, string TcNo, DateTime doBirth)
+        public bool memberRegistration(string name, string surname, string TcNo, string doBirth)
         {
             try
             {
                 var existingMemberNos = db.members.Select(x => x.member_No).ToList();
 
                 Random rnd = new Random();
-                int memberNo = existingMemberNos.Count > 0 ? Convert.ToInt32(existingMemberNos.Max()) + 1 : 1;
+           //personel numarası atama
+           int memberNo = existingMemberNos.Count > 0 ? Convert.ToInt32(existingMemberNos.Max()) + 1 : 1;
 
                 var query = db.members.Where(x => x.member_No == memberNo.ToString());
                 if (query.Count() == 0)
@@ -89,30 +91,31 @@ namespace MemberAutomationSystem
             }
         }
 
-        public bool memberUpdate(int memberId, string name, string surname, string TcNo, DateTime doBirth)
+        public bool memberUpdate(int memberId, string name, string surname, string TcNo, string doBirth)
         {
             try
             {
                 var member = db.members.SingleOrDefault(x => x.member_Id == memberId);
                 if (member != null)
                 {
-
                     member.name = name;
                     member.surname = surname;
                     member.Tc_No = TcNo;
                     member.date_Of_Birth = doBirth;
                     db.SaveChanges();
                     return true;
-
                 }
                 return false;
             }
-            catch (Exception e) { return false;
+            catch (Exception e)
+            {
                 Console.WriteLine(e.Message);
+                return false;
             }
         }
-        
-       
-        
+
+
+
+
     }
 }
