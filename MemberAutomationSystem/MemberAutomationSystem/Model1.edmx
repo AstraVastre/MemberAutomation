@@ -66,9 +66,9 @@
           <Property Name="name" Type="varchar" MaxLength="50" />
           <Property Name="surname" Type="varchar" MaxLength="50" />
           <Property Name="Tc_No" Type="varchar" MaxLength="50" />
-          <Property Name="date_Of_Birth" Type="date" />
+          <Property Name="date_Of_Birth" Type="nvarchar" MaxLength="50" />
           <Property Name="is_Active" Type="bit" />
-          <Property Name="member_No" Type="varchar(max)" />
+          <Property Name="member_No" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Months">
           <Key>
@@ -76,16 +76,6 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Months" Type="varchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_authorityMembers_authority">
           <End Role="authority" Type="Self.authority" Multiplicity="0..1" />
@@ -144,7 +134,6 @@
           <EntitySet Name="logType" EntityType="Self.logType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="members" EntityType="Self.members" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Months" EntityType="Self.Months" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_authorityMembers_authority" Association="Self.FK_authorityMembers_authority">
             <End Role="authority" EntitySet="authority" />
             <End Role="authorityMembers" EntitySet="authorityMembers" />
@@ -174,8 +163,7 @@
           <EntitySet Name="Log" EntityType="MemberAutomationModel.Log" />
           <EntitySet Name="logType" EntityType="MemberAutomationModel.logType" />
           <EntitySet Name="members" EntityType="MemberAutomationModel.members" />
-          <EntitySet Name="Months" EntityType="MemberAutomationModel.x" />
-          <EntitySet Name="sysdiagrams" EntityType="MemberAutomationModel.sysdiagrams" />
+          <EntitySet Name="Months" EntityType="MemberAutomationModel.Months" />
           <AssociationSet Name="FK_authorityMembers_authority" Association="MemberAutomationModel.FK_authorityMembers_authority">
             <End Role="authority" EntitySet="authority" />
             <End Role="authorityMembers" EntitySet="authorityMembers" />
@@ -260,28 +248,18 @@
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="date_Of_Birth" Type="DateTime" Precision="0" />
+          <Property Name="date_Of_Birth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="is_Active" Type="Boolean" />
+          <Property Name="member_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="check_In_Out" Relationship="MemberAutomationModel.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
           <NavigationProperty Name="excuse" Relationship="MemberAutomationModel.FK_excuse_members" FromRole="members" ToRole="excuse" />
-          <Property Name="member_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="x">
+        <EntityType Name="Months">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Months1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_authorityMembers_authority">
           <End Type="MemberAutomationModel.authority" Role="authority" Multiplicity="0..1" />
@@ -331,7 +309,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -410,21 +388,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Months">
-            <EntityTypeMapping TypeName="MemberAutomationModel.x">
+            <EntityTypeMapping TypeName="MemberAutomationModel.Months">
               <MappingFragment StoreEntitySet="Months">
                 <ScalarProperty Name="Months1" ColumnName="Months" />
                 <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="MemberAutomationModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

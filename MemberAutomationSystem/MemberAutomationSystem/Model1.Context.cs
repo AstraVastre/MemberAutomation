@@ -32,7 +32,6 @@ namespace MemberAutomationSystem
         public virtual DbSet<Log> Log { get; set; }
         public virtual DbSet<logType> logType { get; set; }
         public virtual DbSet<members> members { get; set; }
-        public virtual DbSet<x> Months { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Months> Months { get; set; }
     }
 }

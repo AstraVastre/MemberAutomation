@@ -177,7 +177,6 @@ C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutom
 C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\bin\EntityFramework.xml
 C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\bin\EntityFramework.SqlServer.xml
 C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.csproj.AssemblyReference.cache
 C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.csproj.CoreCompileInputs.cache
 C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.csproj.CopyComplete
 C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.dll

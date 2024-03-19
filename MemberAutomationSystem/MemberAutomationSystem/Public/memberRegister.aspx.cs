@@ -35,7 +35,7 @@ namespace MemberAutomationSystem.Pages
                 string name = txt_name.Text.ToUpper().Trim();
                 string surname = txt_surname.Text.ToUpper().Trim();
                 string tc = txt_tcno.Text.Trim();
-                DateTime doBirth = DateTime.Parse(txt_doBirth.Text);  
+                string doBirth = txt_doBirth.Text;  
                lbl_warning.Visible = false;
 
                 // aynı tc ile kayıt var mı

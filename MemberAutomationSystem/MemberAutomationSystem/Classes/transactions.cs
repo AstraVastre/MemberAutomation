@@ -10,7 +10,7 @@ namespace MemberAutomationSystem
         MemberAutomationEntities db = new MemberAutomationEntities();
 
 
-        public bool memberRegistration(string name, string surname, string TcNo, DateTime doBirth)
+        public bool memberRegistration(string name, string surname, string TcNo, string doBirth)
         {
             try
             {
@@ -89,7 +89,7 @@ namespace MemberAutomationSystem
             }
         }
 
-        public bool memberUpdate(int memberId, string name, string surname, string TcNo, DateTime doBirth)
+        public bool memberUpdate(int memberId, string name, string surname, string TcNo, string doBirth)
         {
             try
             {
