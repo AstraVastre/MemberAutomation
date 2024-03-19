@@ -182,3 +182,4 @@ C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutom
 C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.csproj.CopyComplete
 C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.dll
 C:\Users\Mehmet\Github\Proje\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.pdb
+C:\Users\astra\OneDrive\Belgeler\GitHub\MemberAutomation\MemberAutomationSystem\MemberAutomationSystem\obj\Debug\MemberAutomationSystem.csproj.AssemblyReference.cache

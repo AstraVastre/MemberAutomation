@@ -74,7 +74,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Months">
-      <EntityTypeMapping TypeName="MemberAutomationModel.x">
+      <EntityTypeMapping TypeName="MemberAutomationModel.Months">
         <MappingFragment StoreEntitySet="Months">
           <ScalarProperty Name="Months1" ColumnName="Months" />
           <ScalarProperty Name="id" ColumnName="id" />
