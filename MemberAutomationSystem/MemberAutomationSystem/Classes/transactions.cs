@@ -8,33 +8,47 @@ namespace MemberAutomationSystem
     {
 
         MemberAutomationEntities db = new MemberAutomationEntities();
-        
+
 
         public bool memberRegistration(string name, string surname, string TcNo, DateTime doBirth)
         {
             try
             {
-                members members = new members();
-                members.name = name;
-                members.surname = surname;
-                members.Tc_No = TcNo;
-                members.date_Of_Birth = doBirth;
-                members.is_Active = true;
-                try
-                {
-                    db.members.Add(members);
-                    db.SaveChanges();
-                    return true;
-                }
-                catch (Exception e)
-                {
-                   Console.WriteLine(e.Message);
-                    return false;
-                }
-            }
-            catch (Exception e) { return false; }
-        }
+                var existingMemberNos = db.members.Select(x => x.member_No).ToList();
 
+                Random rnd = new Random();
+                int memberNo = existingMemberNos.Count > 0 ? Convert.ToInt32(existingMemberNos.Max()) + 1 : 1;
+
+                var query = db.members.Where(x => x.member_No == memberNo.ToString());
+                if (query.Count() == 0)
+                {
+                    members members = new members();
+                    members.member_No = memberNo.ToString();
+                    members.name = name;
+                    members.surname = surname;
+                    members.Tc_No = TcNo;
+                    members.date_Of_Birth = doBirth;
+                    members.is_Active = true;
+                    try
+                    {
+                        db.members.Add(members);
+                        db.SaveChanges();
+                        return true;
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                        return false;
+                    }
+                }
+                else return false;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
         public bool memberControl(string TcNo)
         {
             try
@@ -48,12 +62,19 @@ namespace MemberAutomationSystem
                 return false; }
 
         }
+        public List<members> memberList()
+        {
+           
 
-        public bool memberInactive(int memberId)
+            return db.members.Where(p => p.is_Active == true).ToList();
+
+
+        }
+        public bool memberInactive(members memberId)
         {
             try
             {
-                var member = db.members.SingleOrDefault(x => x.member_Id == memberId);
+                var member = db.members.SingleOrDefault(x => x.member_Id == memberId.member_Id);
                 if (member != null)
                 {
                     member.is_Active = false;

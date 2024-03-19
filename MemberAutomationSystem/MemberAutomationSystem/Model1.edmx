@@ -68,6 +68,7 @@
           <Property Name="Tc_No" Type="varchar" MaxLength="50" />
           <Property Name="date_Of_Birth" Type="date" />
           <Property Name="is_Active" Type="bit" />
+          <Property Name="member_No" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Months">
           <Key>
@@ -263,6 +264,7 @@
           <Property Name="is_Active" Type="Boolean" />
           <NavigationProperty Name="check_In_Out" Relationship="MemberAutomationModel.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
           <NavigationProperty Name="excuse" Relationship="MemberAutomationModel.FK_excuse_members" FromRole="members" ToRole="excuse" />
+          <Property Name="member_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="x">
           <Key>
@@ -397,6 +399,7 @@
           <EntitySetMapping Name="members">
             <EntityTypeMapping TypeName="MemberAutomationModel.members">
               <MappingFragment StoreEntitySet="members">
+                <ScalarProperty Name="member_No" ColumnName="member_No" />
                 <ScalarProperty Name="is_Active" ColumnName="is_Active" />
                 <ScalarProperty Name="date_Of_Birth" ColumnName="date_Of_Birth" />
                 <ScalarProperty Name="Tc_No" ColumnName="Tc_No" />

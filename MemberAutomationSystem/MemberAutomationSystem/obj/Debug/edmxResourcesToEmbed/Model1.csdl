@@ -98,6 +98,7 @@
     <Property Name="is_Active" Type="Boolean" />
     <NavigationProperty Name="check_In_Out" Relationship="MemberAutomationModel.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
     <NavigationProperty Name="excuse" Relationship="MemberAutomationModel.FK_excuse_members" FromRole="members" ToRole="excuse" />
+    <Property Name="member_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="x">
     <Key>

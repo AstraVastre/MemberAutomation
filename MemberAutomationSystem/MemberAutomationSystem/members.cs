@@ -27,6 +27,7 @@ namespace MemberAutomationSystem
         public string Tc_No { get; set; }
         public Nullable<System.DateTime> date_Of_Birth { get; set; }
         public Nullable<bool> is_Active { get; set; }
+        public string member_No { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<check_In_Out> check_In_Out { get; set; }

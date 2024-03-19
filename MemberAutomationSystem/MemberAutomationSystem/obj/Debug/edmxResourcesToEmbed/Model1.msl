@@ -63,6 +63,7 @@
     <EntitySetMapping Name="members">
       <EntityTypeMapping TypeName="MemberAutomationModel.members">
         <MappingFragment StoreEntitySet="members">
+          <ScalarProperty Name="member_No" ColumnName="member_No" />
           <ScalarProperty Name="is_Active" ColumnName="is_Active" />
           <ScalarProperty Name="date_Of_Birth" ColumnName="date_Of_Birth" />
           <ScalarProperty Name="Tc_No" ColumnName="Tc_No" />

@@ -63,6 +63,7 @@
     <Property Name="Tc_No" Type="varchar" MaxLength="50" />
     <Property Name="date_Of_Birth" Type="date" />
     <Property Name="is_Active" Type="bit" />
+    <Property Name="member_No" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="Months">
     <Key>
