@@ -48,6 +48,7 @@ namespace MemberAutomationSystem.Pages
                         {
                             lbl_warning.Text = "Personel Kayıdı Başarılı";
                             lbl_warning.Visible = true;
+                            GridView1.DataBind();
                         }
                         else
                         {

@@ -61,7 +61,11 @@
     <Property Name="name" Type="varchar" MaxLength="50" />
     <Property Name="surname" Type="varchar" MaxLength="50" />
     <Property Name="Tc_No" Type="varchar" MaxLength="50" />
+<<<<<<< HEAD
     <Property Name="date_Of_Birth" Type="nvarchar" MaxLength="50" />
+=======
+    <Property Name="date_Of_Birth" Type="varchar(max)" />
+>>>>>>> origin
     <Property Name="is_Active" Type="bit" />
     <Property Name="member_No" Type="varchar" MaxLength="50" />
   </EntityType>

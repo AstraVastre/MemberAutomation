@@ -36,15 +36,17 @@
 
     <div class="row">
     <div class="col">
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" CssClass="center-gridview" GridLines="None" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" CssClass="center-gridview" GridLines="None" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1" DataKeyNames="member_Id">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                <asp:BoundField DataField="member_No" HeaderText="Personel Numarası" SortExpression="member_No" ReadOnly="True" />
-                <asp:BoundField DataField="name" HeaderText="Adı" SortExpression="name" />
-                <asp:BoundField DataField="surname" HeaderText="Soyadı" SortExpression="surname" />
-                <asp:BoundField DataField="Tc_No" HeaderText="Tc No" SortExpression="Tc_No" />
-                <asp:BoundField DataField="date_Of_Birth" HeaderText="Doğum Tarihi" SortExpression="date_Of_Birth" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
+                <asp:BoundField DataField="member_Id" HeaderText="member_Id" SortExpression="member_Id" />
+                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
+                <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname" />
+                <asp:BoundField DataField="Tc_No" HeaderText="Tc_No" SortExpression="Tc_No" />
+                <asp:BoundField DataField="date_Of_Birth" HeaderText="date_Of_Birth" SortExpression="date_Of_Birth" />
+                <asp:CheckBoxField DataField="is_Active" HeaderText="is_Active" SortExpression="is_Active" />
+                <asp:BoundField DataField="member_No" HeaderText="member_No" SortExpression="member_No" />
             </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -63,9 +65,10 @@
                 <asp:Parameter Name="name" Type="String" />
                 <asp:Parameter Name="surname" Type="String" />
                 <asp:Parameter Name="TcNo" Type="String" />
-                <asp:Parameter Name="doBirth" Type="DateTime" />
+                <asp:Parameter Name="doBirth" Type="String" />
             </UpdateParameters>
         </asp:ObjectDataSource>
+
     </div>
   </div>
 

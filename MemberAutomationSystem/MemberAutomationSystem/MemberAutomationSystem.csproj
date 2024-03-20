@@ -119,6 +119,7 @@
     <Compile Include="Months.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Public\excuse.aspx.cs">
       <DependentUpon>excuse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,6 +127,8 @@
     <Compile Include="Public\excuse.aspx.designer.cs">
       <DependentUpon>excuse.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin
     <Compile Include="Public\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -180,6 +183,12 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Classes\transactions.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+>>>>>>> origin
   </ItemGroup>
   <ItemGroup>
     <Content Include="libman.json" />
