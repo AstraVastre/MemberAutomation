@@ -78,6 +78,7 @@
     <Content Include="Global.asax" />
     <Content Include="images\call-to-action.png" />
     <Content Include="images\demo-image.png" />
+    <Content Include="images\icon.png" />
     <Content Include="images\iphone.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\profile-picture-one.jpg" />
@@ -92,6 +93,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Public\excuse.aspx" />
+    <Content Include="Public\memberTimes.aspx" />
     <Content Include="Public\style.css" />
     <Content Include="Public\index.aspx" />
     <Content Include="Public\memberRegister.aspx" />
@@ -116,6 +119,16 @@
     <Compile Include="Months.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Public\excuse.aspx.cs">
+      <DependentUpon>excuse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\excuse.aspx.designer.cs">
+      <DependentUpon>excuse.aspx</DependentUpon>
+    </Compile>
+=======
+>>>>>>> origin
     <Compile Include="Public\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -155,6 +168,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\memberTimes.aspx.cs">
+      <DependentUpon>memberTimes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\memberTimes.aspx.designer.cs">
+      <DependentUpon>memberTimes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Public\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -163,9 +183,12 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Classes\transactions.cs" />
+<<<<<<< HEAD
+=======
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+>>>>>>> origin
   </ItemGroup>
   <ItemGroup>
     <Content Include="libman.json" />
@@ -206,9 +229,6 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64358</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44300/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
