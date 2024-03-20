@@ -13,5 +13,10 @@ namespace MemberAutomationSystem.Public
         {
 
         }
+
+        protected void btn_excuse_click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

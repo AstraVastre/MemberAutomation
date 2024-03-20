@@ -33,9 +33,5 @@ namespace MemberAutomationSystem
         public virtual DbSet<logType> logType { get; set; }
         public virtual DbSet<members> members { get; set; }
         public virtual DbSet<Months> Months { get; set; }
-<<<<<<< HEAD
-=======
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
->>>>>>> origin
     }
 }

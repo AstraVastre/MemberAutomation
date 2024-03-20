@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="MemberAutomationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="MemberAutomationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="authority">
           <Key>
             <PropertyRef Name="authority_Id" />
@@ -66,11 +66,7 @@
           <Property Name="name" Type="varchar" MaxLength="50" />
           <Property Name="surname" Type="varchar" MaxLength="50" />
           <Property Name="Tc_No" Type="varchar" MaxLength="50" />
-<<<<<<< HEAD
           <Property Name="date_Of_Birth" Type="nvarchar" MaxLength="50" />
-=======
-          <Property Name="date_Of_Birth" Type="varchar(max)" />
->>>>>>> origin
           <Property Name="is_Active" Type="bit" />
           <Property Name="member_No" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -155,47 +151,18 @@
             <End Role="Log" EntitySet="Log" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MemberAutomationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="MemberAutomationEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="authority" EntityType="MemberAutomationModel.authority" />
-          <EntitySet Name="authorityMembers" EntityType="MemberAutomationModel.authorityMembers" />
-          <EntitySet Name="check_In_Out" EntityType="MemberAutomationModel.check_In_Out" />
-          <EntitySet Name="excuse" EntityType="MemberAutomationModel.excuse" />
-          <EntitySet Name="Log" EntityType="MemberAutomationModel.Log" />
-          <EntitySet Name="logType" EntityType="MemberAutomationModel.logType" />
-          <EntitySet Name="members" EntityType="MemberAutomationModel.members" />
-          <EntitySet Name="Months" EntityType="MemberAutomationModel.Months" />
-<<<<<<< HEAD
-=======
-          <EntitySet Name="sysdiagrams" EntityType="MemberAutomationModel.sysdiagrams" />
->>>>>>> origin
-          <AssociationSet Name="FK_authorityMembers_authority" Association="MemberAutomationModel.FK_authorityMembers_authority">
-            <End Role="authority" EntitySet="authority" />
-            <End Role="authorityMembers" EntitySet="authorityMembers" />
-          </AssociationSet>
-          <AssociationSet Name="FK_check_In_Out_members" Association="MemberAutomationModel.FK_check_In_Out_members">
-            <End Role="members" EntitySet="members" />
-            <End Role="check_In_Out" EntitySet="check_In_Out" />
-          </AssociationSet>
-          <AssociationSet Name="FK_excuse_members" Association="MemberAutomationModel.FK_excuse_members">
-            <End Role="members" EntitySet="members" />
-            <End Role="excuse" EntitySet="excuse" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Log_logType" Association="MemberAutomationModel.FK_Log_logType">
-            <End Role="logType" EntitySet="logType" />
-            <End Role="Log" EntitySet="Log" />
-          </AssociationSet>
-        </EntityContainer>
         <EntityType Name="authority">
           <Key>
             <PropertyRef Name="authority_Id" />
           </Key>
           <Property Name="authority_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="authority_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="authorityMembers" Relationship="MemberAutomationModel.FK_authorityMembers_authority" FromRole="authority" ToRole="authorityMembers" />
+          <NavigationProperty Name="authorityMembers" Relationship="Self.FK_authorityMembers_authority" FromRole="authority" ToRole="authorityMembers" />
         </EntityType>
         <EntityType Name="authorityMembers">
           <Key>
@@ -206,7 +173,7 @@
           <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="authority_type_Id" Type="Int32" />
-          <NavigationProperty Name="authority" Relationship="MemberAutomationModel.FK_authorityMembers_authority" FromRole="authorityMembers" ToRole="authority" />
+          <NavigationProperty Name="authority" Relationship="Self.FK_authorityMembers_authority" FromRole="authorityMembers" ToRole="authority" />
         </EntityType>
         <EntityType Name="check_In_Out">
           <Key>
@@ -218,7 +185,7 @@
           <Property Name="check_Out_Date" Type="DateTime" Precision="3" />
           <Property Name="lunch_break" Type="DateTime" Precision="3" />
           <Property Name="lunch_break_End" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="members" Relationship="MemberAutomationModel.FK_check_In_Out_members" FromRole="check_In_Out" ToRole="members" />
+          <NavigationProperty Name="members" Relationship="Self.FK_check_In_Out_members" FromRole="check_In_Out" ToRole="members" />
         </EntityType>
         <EntityType Name="excuse">
           <Key>
@@ -228,7 +195,7 @@
           <Property Name="member_Id" Type="Int32" />
           <Property Name="excuse_Date" Type="DateTime" Precision="3" />
           <Property Name="excuse_Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="members" Relationship="MemberAutomationModel.FK_excuse_members" FromRole="excuse" ToRole="members" />
+          <NavigationProperty Name="members" Relationship="Self.FK_excuse_members" FromRole="excuse" ToRole="members" />
         </EntityType>
         <EntityType Name="Log">
           <Key>
@@ -238,7 +205,7 @@
           <Property Name="log_Type_Id" Type="Int32" />
           <Property Name="log_Date" Type="DateTime" Precision="3" />
           <Property Name="log_Detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="logType" Relationship="MemberAutomationModel.FK_Log_logType" FromRole="Log" ToRole="logType" />
+          <NavigationProperty Name="logType" Relationship="Self.FK_Log_logType" FromRole="Log" ToRole="logType" />
         </EntityType>
         <EntityType Name="logType">
           <Key>
@@ -246,7 +213,7 @@
           </Key>
           <Property Name="log_Type_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Log_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Log" Relationship="MemberAutomationModel.FK_Log_logType" FromRole="logType" ToRole="Log" />
+          <NavigationProperty Name="Log" Relationship="Self.FK_Log_logType" FromRole="logType" ToRole="Log" />
         </EntityType>
         <EntityType Name="members">
           <Key>
@@ -256,17 +223,11 @@
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-<<<<<<< HEAD
           <Property Name="date_Of_Birth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="is_Active" Type="Boolean" />
           <Property Name="member_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-=======
-          <Property Name="date_Of_Birth" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="is_Active" Type="Boolean" />
-          <Property Name="member_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
->>>>>>> origin
-          <NavigationProperty Name="check_In_Out" Relationship="MemberAutomationModel.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
-          <NavigationProperty Name="excuse" Relationship="MemberAutomationModel.FK_excuse_members" FromRole="members" ToRole="excuse" />
+          <NavigationProperty Name="check_In_Out" Relationship="Self.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
+          <NavigationProperty Name="excuse" Relationship="Self.FK_excuse_members" FromRole="members" ToRole="excuse" />
         </EntityType>
         <EntityType Name="Months">
           <Key>
@@ -276,8 +237,8 @@
           <Property Name="Months1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_authorityMembers_authority">
-          <End Type="MemberAutomationModel.authority" Role="authority" Multiplicity="0..1" />
-          <End Type="MemberAutomationModel.authorityMembers" Role="authorityMembers" Multiplicity="*" />
+          <End Role="authority" Type="Self.authority" Multiplicity="0..1" />
+          <End Role="authorityMembers" Type="Self.authorityMembers" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="authority">
               <PropertyRef Name="authority_Id" />
@@ -288,8 +249,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_check_In_Out_members">
-          <End Type="MemberAutomationModel.members" Role="members" Multiplicity="0..1" />
-          <End Type="MemberAutomationModel.check_In_Out" Role="check_In_Out" Multiplicity="*" />
+          <End Role="members" Type="Self.members" Multiplicity="0..1" />
+          <End Role="check_In_Out" Type="Self.check_In_Out" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="members">
               <PropertyRef Name="member_Id" />
@@ -300,8 +261,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_excuse_members">
-          <End Type="MemberAutomationModel.members" Role="members" Multiplicity="0..1" />
-          <End Type="MemberAutomationModel.excuse" Role="excuse" Multiplicity="*" />
+          <End Role="members" Type="Self.members" Multiplicity="0..1" />
+          <End Role="excuse" Type="Self.excuse" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="members">
               <PropertyRef Name="member_Id" />
@@ -312,8 +273,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Log_logType">
-          <End Type="MemberAutomationModel.logType" Role="logType" Multiplicity="0..1" />
-          <End Type="MemberAutomationModel.Log" Role="Log" Multiplicity="*" />
+          <End Role="logType" Type="Self.logType" Multiplicity="0..1" />
+          <End Role="Log" Type="Self.Log" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="logType">
               <PropertyRef Name="log_Type_Id" />
@@ -323,7 +284,33 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        </Schema>
+        <EntityContainer Name="MemberAutomationEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="authority" EntityType="Self.authority" />
+          <EntitySet Name="authorityMembers" EntityType="Self.authorityMembers" />
+          <EntitySet Name="check_In_Out" EntityType="Self.check_In_Out" />
+          <EntitySet Name="excuse" EntityType="Self.excuse" />
+          <EntitySet Name="Log" EntityType="Self.Log" />
+          <EntitySet Name="logType" EntityType="Self.logType" />
+          <EntitySet Name="members" EntityType="Self.members" />
+          <EntitySet Name="Months" EntityType="Self.Months" />
+          <AssociationSet Name="FK_authorityMembers_authority" Association="Self.FK_authorityMembers_authority">
+            <End Role="authority" EntitySet="authority" />
+            <End Role="authorityMembers" EntitySet="authorityMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_check_In_Out_members" Association="Self.FK_check_In_Out_members">
+            <End Role="members" EntitySet="members" />
+            <End Role="check_In_Out" EntitySet="check_In_Out" />
+          </AssociationSet>
+          <AssociationSet Name="FK_excuse_members" Association="Self.FK_excuse_members">
+            <End Role="members" EntitySet="members" />
+            <End Role="excuse" EntitySet="excuse" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Log_logType" Association="Self.FK_Log_logType">
+            <End Role="logType" EntitySet="logType" />
+            <End Role="Log" EntitySet="Log" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -332,80 +319,80 @@
           <EntitySetMapping Name="authority">
             <EntityTypeMapping TypeName="MemberAutomationModel.authority">
               <MappingFragment StoreEntitySet="authority">
-                <ScalarProperty Name="authority_Type" ColumnName="authority_Type" />
                 <ScalarProperty Name="authority_Id" ColumnName="authority_Id" />
+                <ScalarProperty Name="authority_Type" ColumnName="authority_Type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="authorityMembers">
             <EntityTypeMapping TypeName="MemberAutomationModel.authorityMembers">
               <MappingFragment StoreEntitySet="authorityMembers">
-                <ScalarProperty Name="authority_type_Id" ColumnName="authority_type_Id" />
-                <ScalarProperty Name="Tc_No" ColumnName="Tc_No" />
-                <ScalarProperty Name="surname" ColumnName="surname" />
-                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="authority_member_Id" ColumnName="authority_member_Id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="Tc_No" ColumnName="Tc_No" />
+                <ScalarProperty Name="authority_type_Id" ColumnName="authority_type_Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="check_In_Out">
             <EntityTypeMapping TypeName="MemberAutomationModel.check_In_Out">
               <MappingFragment StoreEntitySet="check_In_Out">
-                <ScalarProperty Name="lunch_break_End" ColumnName="lunch_break_End" />
-                <ScalarProperty Name="lunch_break" ColumnName="lunch_break" />
-                <ScalarProperty Name="check_Out_Date" ColumnName="check_Out_Date" />
-                <ScalarProperty Name="check_In_Date" ColumnName="check_In_Date" />
-                <ScalarProperty Name="member_Id" ColumnName="member_Id" />
                 <ScalarProperty Name="check_In_Out_Id" ColumnName="check_In_Out_Id" />
+                <ScalarProperty Name="member_Id" ColumnName="member_Id" />
+                <ScalarProperty Name="check_In_Date" ColumnName="check_In_Date" />
+                <ScalarProperty Name="check_Out_Date" ColumnName="check_Out_Date" />
+                <ScalarProperty Name="lunch_break" ColumnName="lunch_break" />
+                <ScalarProperty Name="lunch_break_End" ColumnName="lunch_break_End" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="excuse">
             <EntityTypeMapping TypeName="MemberAutomationModel.excuse">
               <MappingFragment StoreEntitySet="excuse">
-                <ScalarProperty Name="excuse_Text" ColumnName="excuse_Text" />
-                <ScalarProperty Name="excuse_Date" ColumnName="excuse_Date" />
-                <ScalarProperty Name="member_Id" ColumnName="member_Id" />
                 <ScalarProperty Name="excuse_Id" ColumnName="excuse_Id" />
+                <ScalarProperty Name="member_Id" ColumnName="member_Id" />
+                <ScalarProperty Name="excuse_Date" ColumnName="excuse_Date" />
+                <ScalarProperty Name="excuse_Text" ColumnName="excuse_Text" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Log">
             <EntityTypeMapping TypeName="MemberAutomationModel.Log">
               <MappingFragment StoreEntitySet="Log">
-                <ScalarProperty Name="log_Detail" ColumnName="log_Detail" />
-                <ScalarProperty Name="log_Date" ColumnName="log_Date" />
-                <ScalarProperty Name="log_Type_Id" ColumnName="log_Type_Id" />
                 <ScalarProperty Name="log_Id" ColumnName="log_Id" />
+                <ScalarProperty Name="log_Type_Id" ColumnName="log_Type_Id" />
+                <ScalarProperty Name="log_Date" ColumnName="log_Date" />
+                <ScalarProperty Name="log_Detail" ColumnName="log_Detail" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="logType">
             <EntityTypeMapping TypeName="MemberAutomationModel.logType">
               <MappingFragment StoreEntitySet="logType">
-                <ScalarProperty Name="Log_Type" ColumnName="Log_Type" />
                 <ScalarProperty Name="log_Type_Id" ColumnName="log_Type_Id" />
+                <ScalarProperty Name="Log_Type" ColumnName="Log_Type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="members">
             <EntityTypeMapping TypeName="MemberAutomationModel.members">
               <MappingFragment StoreEntitySet="members">
-                <ScalarProperty Name="member_No" ColumnName="member_No" />
-                <ScalarProperty Name="is_Active" ColumnName="is_Active" />
-                <ScalarProperty Name="date_Of_Birth" ColumnName="date_Of_Birth" />
-                <ScalarProperty Name="Tc_No" ColumnName="Tc_No" />
-                <ScalarProperty Name="surname" ColumnName="surname" />
-                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="member_Id" ColumnName="member_Id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="Tc_No" ColumnName="Tc_No" />
+                <ScalarProperty Name="date_Of_Birth" ColumnName="date_Of_Birth" />
+                <ScalarProperty Name="is_Active" ColumnName="is_Active" />
+                <ScalarProperty Name="member_No" ColumnName="member_No" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Months">
             <EntityTypeMapping TypeName="MemberAutomationModel.Months">
               <MappingFragment StoreEntitySet="Months">
-                <ScalarProperty Name="Months1" ColumnName="Months" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Months1" ColumnName="Months" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
