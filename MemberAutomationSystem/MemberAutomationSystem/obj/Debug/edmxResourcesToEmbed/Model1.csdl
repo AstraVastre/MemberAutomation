@@ -9,7 +9,10 @@
     <EntitySet Name="logType" EntityType="MemberAutomationModel.logType" />
     <EntitySet Name="members" EntityType="MemberAutomationModel.members" />
     <EntitySet Name="Months" EntityType="MemberAutomationModel.Months" />
+<<<<<<< HEAD
+=======
     <EntitySet Name="sysdiagrams" EntityType="MemberAutomationModel.sysdiagrams" />
+>>>>>>> origin
     <AssociationSet Name="FK_authorityMembers_authority" Association="MemberAutomationModel.FK_authorityMembers_authority">
       <End Role="authority" EntitySet="authority" />
       <End Role="authorityMembers" EntitySet="authorityMembers" />
@@ -94,9 +97,15 @@
     <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
+    <Property Name="date_Of_Birth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="is_Active" Type="Boolean" />
+    <Property Name="member_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+=======
     <Property Name="date_Of_Birth" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="is_Active" Type="Boolean" />
     <Property Name="member_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+>>>>>>> origin
     <NavigationProperty Name="check_In_Out" Relationship="MemberAutomationModel.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
     <NavigationProperty Name="excuse" Relationship="MemberAutomationModel.FK_excuse_members" FromRole="members" ToRole="excuse" />
   </EntityType>
@@ -106,16 +115,6 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Months1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <Association Name="FK_authorityMembers_authority">
     <End Type="MemberAutomationModel.authority" Role="authority" Multiplicity="0..1" />
