@@ -1,24 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Public/Site.Master" AutoEventWireup="true" CodeBehind="excuse.aspx.cs" Inherits="MemberAutomationSystem.Public.excuse" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentHeader" runat="server">
-    <style type="text/css">
-        .auto-style1 {
-            position: relative;
-            width: 100%;
-            min-height: 1px;
-            -ms-flex: 0 0 16.666667%;
-            flex: 0 0 16.666667%;
-            max-width: 16.666667%;
-            left: 2px;
-            top: 0px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-    </style>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="server">
     <div class="row">
     <div class="col">
-      <h4>Mazeret</h4>
+      <h4>  Mazeret</h4>
     </div>
   </div>
  

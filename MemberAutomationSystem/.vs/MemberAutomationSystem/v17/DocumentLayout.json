@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\enesb\\OneDrive\\Belgeler\\GitHub\\MemberAutomation\\MemberAutomationSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{478110BA-AA2F-4D88-819E-C1650E31C46E}|MemberAutomationSystem\\MemberAutomationSystem.csproj|C:\\Users\\enesb\\OneDrive\\Belgeler\\GitHub\\MemberAutomation\\MemberAutomationSystem\\memberautomationsystem\\public\\excuse.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{478110BA-AA2F-4D88-819E-C1650E31C46E}|MemberAutomationSystem\\MemberAutomationSystem.csproj|solutionrelative:memberautomationsystem\\public\\excuse.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{478110BA-AA2F-4D88-819E-C1650E31C46E}|MemberAutomationSystem\\MemberAutomationSystem.csproj|C:\\Users\\enesb\\OneDrive\\Belgeler\\GitHub\\MemberAutomation\\MemberAutomationSystem\\memberautomationsystem\\public\\membertimes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{478110BA-AA2F-4D88-819E-C1650E31C46E}|MemberAutomationSystem\\MemberAutomationSystem.csproj|solutionrelative:memberautomationsystem\\public\\membertimes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "memberTimes.aspx",
+              "DocumentMoniker": "C:\\Users\\enesb\\OneDrive\\Belgeler\\GitHub\\MemberAutomation\\MemberAutomationSystem\\MemberAutomationSystem\\Public\\memberTimes.aspx",
+              "RelativeDocumentMoniker": "MemberAutomationSystem\\Public\\memberTimes.aspx",
+              "ToolTip": "C:\\Users\\enesb\\OneDrive\\Belgeler\\GitHub\\MemberAutomation\\MemberAutomationSystem\\MemberAutomationSystem\\Public\\memberTimes.aspx",
+              "RelativeToolTip": "MemberAutomationSystem\\Public\\memberTimes.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-03-20T11:11:41.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "excuse.aspx",
+              "DocumentMoniker": "C:\\Users\\enesb\\OneDrive\\Belgeler\\GitHub\\MemberAutomation\\MemberAutomationSystem\\MemberAutomationSystem\\Public\\excuse.aspx",
+              "RelativeDocumentMoniker": "MemberAutomationSystem\\Public\\excuse.aspx",
+              "ToolTip": "C:\\Users\\enesb\\OneDrive\\Belgeler\\GitHub\\MemberAutomation\\MemberAutomationSystem\\MemberAutomationSystem\\Public\\excuse.aspx",
+              "RelativeToolTip": "MemberAutomationSystem\\Public\\excuse.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-03-20T11:11:11.918Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

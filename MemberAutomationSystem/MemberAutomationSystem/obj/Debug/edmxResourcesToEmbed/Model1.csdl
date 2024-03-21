@@ -69,7 +69,7 @@
     <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="date_Of_Birth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="is_Active" Type="Boolean" />
-    <Property Name="member_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="member_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="check_In_Out" Relationship="Self.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
     <NavigationProperty Name="excuse" Relationship="Self.FK_excuse_members" FromRole="members" ToRole="excuse" />
   </EntityType>
@@ -79,6 +79,16 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Months1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <Association Name="FK_authorityMembers_authority">
     <End Role="authority" Type="Self.authority" Multiplicity="0..1" />
@@ -137,6 +147,7 @@
     <EntitySet Name="logType" EntityType="Self.logType" />
     <EntitySet Name="members" EntityType="Self.members" />
     <EntitySet Name="Months" EntityType="Self.Months" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <AssociationSet Name="FK_authorityMembers_authority" Association="Self.FK_authorityMembers_authority">
       <End Role="authority" EntitySet="authority" />
       <End Role="authorityMembers" EntitySet="authorityMembers" />

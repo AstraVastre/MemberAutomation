@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="27e512feecd740abaa095d02be3e2d8c" Name="Diagram1">
+      <Diagram DiagramId="4f520fd12ec54794b799ab741ce76be4" Name="Diagram1">
         <EntityTypeShape EntityType="MemberAutomationModel.authority" Width="1.5" PointX="5.75" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MemberAutomationModel.authorityMembers" Width="1.5" PointX="8" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MemberAutomationModel.check_In_Out" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="MemberAutomationModel.logType" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MemberAutomationModel.members" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MemberAutomationModel.Months" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MemberAutomationModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="MemberAutomationModel.FK_authorityMembers_authority" ManuallyRouted="false" />
         <AssociationConnector Association="MemberAutomationModel.FK_check_In_Out_members" ManuallyRouted="false" />
         <AssociationConnector Association="MemberAutomationModel.FK_excuse_members" ManuallyRouted="false" />
