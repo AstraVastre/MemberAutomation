@@ -75,7 +75,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Css\loginstyle.css" />
     <Content Include="Global.asax" />
     <Content Include="images\call-to-action.png" />
     <Content Include="images\CaseStudy1.png" />
@@ -86,6 +85,26 @@
     <Content Include="images\profile-picture-one.jpg" />
     <Content Include="index.html" />
     <Content Include="login.aspx" />
+    <Content Include="login_page\css\main.css" />
+    <Content Include="login_page\css\util.css" />
+    <Content Include="login_page\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="login_page\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="login_page\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="login_page\login_images\avatar-01.jpg" />
+    <Content Include="login_page\login_images\icons\favicon.ico" />
+    <Content Include="login_page\login_images\icons\icon.ico" />
+    <Content Include="login_page\login_images\img-01.jpg" />
+    <Content Include="login_page\index.html" />
+    <Content Include="login_page\js\main.js" />
+    <Content Include="login_page\login_images\isparta_login.jpg" />
+    <Content Include="login_page\vendor\animate\animate.css" />
+    <Content Include="login_page\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="login_page\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="login_page\vendor\bootstrap\js\popper.js" />
+    <Content Include="login_page\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="login_page\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="login_page\vendor\select2\select2.min.css" />
+    <Content Include="login_page\vendor\select2\select2.min.js" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -96,11 +115,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Private\mRegister.aspx" />
+    <Content Include="Private\mtimes.aspx" />
     <Content Include="Public\excuse.aspx" />
-    <Content Include="Private\memberTimes.aspx" />
     <Content Include="Public\index.aspx" />
     <Content Include="Css\style.css" />
-    <Content Include="Private\memberRegister.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +172,27 @@
     <Compile Include="Months.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Private\mRegister.aspx.cs">
+      <DependentUpon>mRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\mRegister.aspx.designer.cs">
+      <DependentUpon>mRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Private\mtimes.aspx.cs">
+      <DependentUpon>mtimes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\mtimes.aspx.designer.cs">
+      <DependentUpon>mtimes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Private\Private.Master.cs">
+      <DependentUpon>Private.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\Private.Master.designer.cs">
+      <DependentUpon>Private.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -165,21 +205,7 @@
     <Compile Include="Public\excuse.aspx.designer.cs">
       <DependentUpon>excuse.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Private\memberRegister.aspx.cs">
-      <DependentUpon>memberRegister.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Private\memberRegister.aspx.designer.cs">
-      <DependentUpon>memberRegister.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Private\memberTimes.aspx.cs">
-      <DependentUpon>memberTimes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Private\memberTimes.aspx.designer.cs">
-      <DependentUpon>memberTimes.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Public\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -187,11 +213,11 @@
     <Compile Include="Public\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Site.Master.cs">
+    <Compile Include="Public\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site.Master.designer.cs">
+    <Compile Include="Public\Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Classes\transactions.cs" />
@@ -208,8 +234,17 @@
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="login_page\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="login_page\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="login_page\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="login_page\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="login_page\fonts\font-awesome-4.7.0\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="login_page\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="login_page\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="login_page\fonts\montserrat\Montserrat-Regular.ttf" />
     <None Include="packages.config" />
-    <Content Include="Site.Master" />
+    <Content Include="Public\Site.Master" />
+    <Content Include="Private\Private.Master" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

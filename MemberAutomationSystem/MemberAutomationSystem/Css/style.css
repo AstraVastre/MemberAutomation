@@ -555,8 +555,8 @@ footer small {
 		background-color: #0095f7;
 	}
 
-	footer {
-		padding: 60px 25px;
+	/*footer {
+		
 	}
 	footer h5 {
 		font-size: 18px;
@@ -576,7 +576,7 @@ footer small {
 	footer small {
 		float: left;
 		margin-top: 20px;
-	}
+	}*/
 }
 
 @media (max-width: 768px) { 

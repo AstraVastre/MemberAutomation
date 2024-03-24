@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="memberRegister.aspx.cs" Inherits="MemberAutomationSystem.Pages.memberRegister" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentHeader" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Private/Private.Master" AutoEventWireup="true" CodeBehind="mRegister.aspx.cs" Inherits="MemberAutomationSystem.Private.mRegister" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .center-gridview {
     margin: 0 auto;
@@ -7,8 +7,8 @@
 }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="server">
-    <div class="row">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+      <div class="row">
     <div class="col">
       <h4>Personel Kayıt</h4>
     </div>
@@ -22,14 +22,10 @@
                         <li> <asp:TextBox ID="txt_tcno" runat="server" Width="200px" placeholder="Personel TcNo" TextMode="Number"></asp:TextBox> </li>
                          <li> <asp:TextBox ID="txt_doBirth" runat="server" Width="200px" placeholder=" Personel Doğum Tarihi" TextMode="Date" ></asp:TextBox> </li>
 
-                        <li><asp:Button ID="btn_save" runat="server" Text="Kaydet" Width="100px" CssClass="btn-success" OnClick="btn_save_Click"  Font-Bold="True"/> </li>
+                        <li><asp:Button ID="btn_save" runat="server" Text="Kaydet" Width="100px" CssClass="btn-success"  Font-Bold="True"/> </li>
                         <li> <asp:Label ID="lbl_warning" runat="server" ForeColor="#FF3300" Visible="False"></asp:Label> </li>
                         
-                
-
-
         </ul>
-
 
     </div>
   </div>

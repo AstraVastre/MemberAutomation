@@ -1,0 +1,189 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Private.Master.cs" Inherits="MemberAutomationSystem.Private.PrivateMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="~/Css/style.css" type="text/css" runat="server"/>
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server"> </asp:ContentPlaceHolder>
+    <title>Personel Otomasyon</title>
+</head>
+<body>
+   <form id="form1" runat="server">
+        <nav class="navbar navbar-default navbar-expand-lg fixed-top custom-navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon ion-md-menu"></span>
+    </button>
+    <img src="images/icon.png" class="img-fluid nav-logo-mobile" alt="">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="container">
+      	<img src="images/icon.png" class="img-fluid nav-logo-desktop" alt="" style="width:30px" height:"90px">
+        <ul class="navbar-nav ml-auto nav-right" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
+          <li class="nav-item nav-custom-link">
+            <a class="nav-link" href="mTimes.aspx">Personel Çalışma Süreleri<i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li>
+          <li class="nav-item nav-custom-link">
+            <a class="nav-link" href="mRegister.aspx">Personel Kayıt<i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li>
+         <%-- <li class="nav-item nav-custom-link">
+            <a class="nav-link" href="memberTimes.aspx">Personel Çalışma Süreleri<i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li>
+          <li class="nav-item nav-custom-link">
+            <a class="nav-link" href="memberRegister.aspx">Personel<i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li>--%>
+<%--          <li class="nav-item nav-custom-link btn btn-demo-small">
+            <a class="nav-link" href="#">Try for Free <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li>--%>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- E N D  N A V B A R -->
+  
+  <!-- H E R O -->
+  <section id="hero">
+    <div class="container">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+      </div>
+    
+  </section>
+
+          <!-- E N D  H E R O -->
+
+
+
+          <!--  F O O T E R  -->
+
+      <%--   <footer>
+    <footer class="section footer-corporate context-dark">
+        <%--<div class="footer-corporate-inset">
+          <div class="container">
+            <div class="row row-40 justify-content-lg-between">
+              <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+                <div class="oh-desktop">
+                  <div class="wow slideInRight" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: slideInRight;">
+                    <h6 class="text-spacing-100 text-uppercase">İLETİŞİM</h6>
+                    <ul class="footer-contacts d-inline-block d-sm-block">
+                      <li>
+                        <!-- <div class="unit">
+                          <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                          <div class="unit-body"><a class="link-phone" href="tel:#">+1 323-913-4688</a></div>
+                        </div> -->
+                      </li>
+                      <li>
+                        <div class="unit">
+                          <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                          <div class="unit-body"><a class="link-aemail" href="mailto:siberisparta@gmail.com">siberisparta@gmail.com</a></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit">
+                          <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                          <div class="unit-body"><a class="link-location" href="https://maps.app.goo.gl/A7PBM4jA8UFrMBsNA" target="_blank">Isparta Fatih Mahallesi Paşaoğlu Caddesi Siber Isparta Gençlik Merkezi Isparta/Merkez</a></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+               <!--<div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
+                <div class="oh-desktop">
+                  <div class="wow slideInDown" data-wow-delay="0s">
+                    <h6 class="text-spacing-100 text-uppercase">Popular news</h6>
+                    <!-- Post Minimal 2-->
+                    <!-- <article class="post post-minimal-2">
+                      <p class="post-minimal-2-title"><a href="#">Your Personal Guide to 5 Best Places to Visit on Earth</a></p>
+                      <div class="post-minimal-2-time">
+                        <time datetime="2019-05-04">May 04, 2019</time>
+                      </div>
+                    </article>
+                    Post Minimal 2-->
+                    <!-- <article class="post post-minimal-2">
+                      <p class="post-minimal-2-title"><a href="#">Top 10 Hotels: Rating by Wonder Tour Travel Experts</a></p>
+                      <div class="post-minimal-2-time">
+                        <time datetime="2019-05-04">May 04, 2019</time>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div> --> 
+              <div class="col-sm-11 col-md-7 col-lg-5 col-xl-4">
+                <div class="oh-desktop">
+                  <div class="wow slideInLeft" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: slideInLeft;">
+                    <!-- <h6 class="text-spacing-100 text-uppercase">Quick links</h6>
+                    <ul class="row-6 list-0 list-marked list-marked-md list-marked-secondary list-custom-2">
+                      <li><a href="about.html">About us</a></li>
+                      <li><a href="#">Our Tours</a></li>
+                      <li><a href="#">Our Team</a></li>
+                      <li><a href="#">Gallery</a></li>
+                      <li><a href="#">Blog</a></li>
+                    </ul> -->
+                    <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="https://siber.isparta.bel.tr/contact-us.html">İletişim</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>--%>
+<%--        <div class="footer-corporate-bottom-panel">
+        <%--  <div class="container">
+            <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
+              <%--<div class="col-sm-6 col-md-4 text-sm-right text-md-center">
+               <%-- <div>
+                 <%-- <ul class="list-inline list-inline-sm footer-social-list-2">
+                    <li><a class="icon fa fa-facebook" href="#"></a></li>
+                    <li><a class="icon fa fa-twitter" href="#"></a></li>
+                    <li><a class="icon fa fa-google-plus" href="#"></a></li>
+                    <li><a class="icon fa fa-instagram" href="#"></a></li>
+                  </ul>--%>
+                <!--</div>-->
+              <%--</div>--%>
+              <%--<div class="col-sm-6 col-md-4 order-sm-first">
+                <!-- Rights-->
+               <%-- <p class="rights"><span>©&nbsp;</span><span class="copyright-year">2024</span><span>&nbsp;</span><span>Siber Isparta Gençlik Merkezi</span>. All Rights Reserved. Design by <a href="#">Mehmet Eren Kaşıkçı & Enes Balcı & Candaş Aytemir</a></p>--%>
+              <!--</div>-->
+             <%-- <div class="col-sm-6 col-md-4 text-md-right">
+                <!-- <p class="rights"><a href="#">Privacy Policy</a></p> -->
+              </div>--%>
+<%--            </div>
+          </div>
+        </div>--%>
+  <%--    </footer>--%>
+  <%--    <div class="row">
+       <%-- <div class="col-md-6 col-xs-12">
+            <a href="#"><i class="icon ion-logo-facebook"></i></a>
+            <a href="#"><i class="icon ion-logo-instagram"></i></a>
+            <a href="#"><i class="icon ion-logo-twitter"></i></a>
+            <a href="#"><i class="icon ion-logo-youtube"></i></a>
+          </div>--%>
+          <%--<div class="col-md-6 col-xs-12">
+            <small>2018 &copy; All rights reserved. Made by <a href="http://templune.com/" target="blank" class="external-links">Templune</a></small>
+          </div>--%>
+      <!--</div>-->
+   <%-- </div>
+  </footer>--%>
+  <!--  E N D  F O O T E R  -->
+    
+
+    <!-- External JavaScripts -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    </form>
+</body>
+</html>

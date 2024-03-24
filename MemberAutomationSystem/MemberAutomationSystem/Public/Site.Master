@@ -68,11 +68,11 @@
 
           <!--  F O O T E R  -->
 
-         <footer>
+  <%--       <footer>
     <footer class="section footer-corporate context-dark">
-        <div class="footer-corporate-inset">
+        <%--<div class="footer-corporate-inset">
           <div class="container">
-            <div class="row row-40 justify-content-lg-between">
+            <%--<div class="row row-40 justify-content-lg-between">
               <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
                 <div class="oh-desktop">
                   <div class="wow slideInRight" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s; animation-name: slideInRight;">
@@ -136,11 +136,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-corporate-bottom-panel">
-          <div class="container">
+            </div>--%>
+          <!--</div>-->
+        <!--</div>-->
+      <%--  <div class="footer-corporate-bottom-panel">
+        <%--  <div class="container">
             <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
               <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
                <%-- <div>
@@ -149,21 +149,21 @@
                     <li><a class="icon fa fa-twitter" href="#"></a></li>
                     <li><a class="icon fa fa-google-plus" href="#"></a></li>
                     <li><a class="icon fa fa-instagram" href="#"></a></li>
-                  </ul>--%>
-                </div>--%>
-              </div>
-              <div class="col-sm-6 col-md-4 order-sm-first">
+               </ul>--%>
+                <!--</div>-->
+              <!--</div>-->
+            <%--  <div class="col-sm-6 col-md-4 order-sm-first">
                 <!-- Rights-->
                 <p class="rights"><span>©&nbsp;</span><span class="copyright-year">2024</span><span>&nbsp;</span><span>Siber Isparta Gençlik Merkezi</span>. All Rights Reserved. Design by <a href="#">Mehmet Eren Kaşıkçı & Enes Balcı & Candaş Aytemir</a></p>
               </div>    
               <div class="col-sm-6 col-md-4 text-md-right">
                 <!-- <p class="rights"><a href="#">Privacy Policy</a></p> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <div class="row">
+              </div>--%>
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+     <!-- </footer>-->
+     <%-- <div class="row">
         <div class="col-md-6 col-xs-12">
             <a href="#"><i class="icon ion-logo-facebook"></i></a>
             <a href="#"><i class="icon ion-logo-instagram"></i></a>
@@ -173,9 +173,9 @@
           <div class="col-md-6 col-xs-12">
             <small>2018 &copy; All rights reserved. Made by <a href="http://templune.com/" target="blank" class="external-links">Templune</a></small>
           </div>
-      </div>
-    </div>
-  </footer>
+      </div>--%>
+    <!--</div--%>>-->
+  <!--</footer>-->
   <!--  E N D  F O O T E R  -->
     
 

@@ -1,8 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="memberTimes.aspx.cs" Inherits="MemberAutomationSystem.Public.member_times" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentHeader" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Private/Private.Master" AutoEventWireup="true" CodeBehind="mtimes.aspx.cs" Inherits="MemberAutomationSystem.Private.mtimes" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="server">
-   <div class="row" style="display:flex; flex-direction: column; height:10vh;">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <div class="row" style="display:flex; flex-direction: column; height:10vh;">
     <div class="col" style="flex:1;">
     </div>
   </div>
@@ -57,8 +58,38 @@
                 
            
        </div>
+       
+       </div>
+    <br />
+       <div class="row">
+           <div class="col">
+           <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="ObjectDataSource1" ForeColor="#333333" GridLines="None" style="margin:0 auto;">
+               <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+               <Columns>
+                   <asp:CommandField ShowSelectButton="True" />
+                   <asp:BoundField DataField="member_Id" HeaderText="member_Id" SortExpression="member_Id" Visible="False" />
+                   <asp:BoundField DataField="member_No" HeaderText="PNO" SortExpression="member_No" />
+                   <asp:BoundField DataField="name" HeaderText="PAdı" SortExpression="name" />
+                   <asp:BoundField DataField="surname" HeaderText="PSoyadı" SortExpression="surname" />
+                   <asp:BoundField DataField="Tc_No" HeaderText="PTCNO" SortExpression="Tc_No" />
+                   <asp:BoundField DataField="date_Of_Birth" HeaderText="PDoğumTarihi" SortExpression="date_Of_Birth" />
+                   <asp:CheckBoxField DataField="is_Active" HeaderText="is_Active" SortExpression="is_Active" Visible="False" />
+               </Columns>
+               <EditRowStyle BackColor="#999999" />
+               <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+               <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+               <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+               <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+               <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+               <SortedAscendingCellStyle BackColor="#E9E7E2" />
+               <SortedAscendingHeaderStyle BackColor="#506C8C" />
+               <SortedDescendingCellStyle BackColor="#FFFDF8" />
+               <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+           </asp:GridView>
+           <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="memberList" TypeName="MemberAutomationSystem.transactions"></asp:ObjectDataSource>
+       </div>
+       </div>
 
-       <div class="r"></div>
-   </div>
+   
     
 </asp:Content>
