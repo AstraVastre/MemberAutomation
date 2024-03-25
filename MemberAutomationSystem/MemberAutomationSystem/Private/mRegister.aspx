@@ -8,34 +8,28 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <div class="row">
+   <div class="row">
     <div class="col">
       <h4>Personel Kayıt</h4>
     </div>
   </div>
- 
  <div class="row">
     <div class="col">
         <ul>
-                        <li> <asp:TextBox ID="txt_name" runat="server" Width="200px" placeholder="Personel Adı" ></asp:TextBox> </li>
+                        <li> <asp:TextBox ID="txt_name" runat="server" Width="200px" placeholder="Personel Adı" style=""></asp:TextBox> </li>
                         <li> <asp:TextBox ID="txt_surname" runat="server" Width="200px" placeholder="Personel Soyadı"></asp:TextBox> </li>
                         <li> <asp:TextBox ID="txt_tcno" runat="server" Width="200px" placeholder="Personel TcNo" TextMode="Number"></asp:TextBox> </li>
-                         <li> <asp:TextBox ID="txt_doBirth" runat="server" Width="200px" placeholder=" Personel Doğum Tarihi" TextMode="Date" ></asp:TextBox> </li>
-
-                        <li><asp:Button ID="btn_save" runat="server" Text="Kaydet" Width="100px" CssClass="btn-success"  Font-Bold="True"/> </li>
+                        <li> <asp:TextBox ID="txt_doBirth" runat="server" Width="200px" placeholder=" Personel Doğum Tarihi" TextMode="Date" ></asp:TextBox> </li>
+                        <li><asp:Button ID="btn_save" runat="server" Text="Kaydet" Width="100px" CssClass="btn-success"  Font-Bold="True" style="border-radius:15px 15px"/> </li>
                         <li> <asp:Label ID="lbl_warning" runat="server" ForeColor="#FF3300" Visible="False"></asp:Label> </li>
-                        
         </ul>
-
     </div>
   </div>
-
     <div class="row">
     <div class="col">
         <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" CssClass="center-gridview" GridLines="None" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1" DataKeyNames="member_Id">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
                 <asp:BoundField DataField="member_No" HeaderText="Personel No" SortExpression="Personel No" />
                 <asp:BoundField DataField="member_Id" HeaderText="Personel ID" SortExpression="Personel ID" Visible="False" />
                 <asp:BoundField DataField="name" HeaderText="Personel İsim" SortExpression="Personel İsim" />
@@ -43,6 +37,8 @@
                 <asp:BoundField DataField="Tc_No" HeaderText="Personel Tc No" SortExpression="Personel Tc No" />
                 <asp:BoundField DataField="date_Of_Birth" HeaderText="Doğum Tarihi" SortExpression="Doğum Tarihi" />
                 <asp:CheckBoxField DataField="is_Active" HeaderText="Aktif Mi?" SortExpression="Aktif Mi?" />
+                
+                <asp:CommandField CancelText="İptal" DeleteText="Sil" EditText="Düzenle" InsertText="Ekle" NewText="Yeni" SelectText="Seç" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" UpdateText="Güncelle" />
                 
             </Columns>
             <EditRowStyle BackColor="#999999" />

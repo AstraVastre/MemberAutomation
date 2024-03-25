@@ -65,12 +65,8 @@ namespace MemberAutomationSystem
 
         }
         public List<members> memberList()
-        {
-           
-
-            return db.members.Where(p => p.is_Active == true).ToList();
-
-
+        {       
+            return db.members.ToList();
         }
         public bool memberInactive(members memberId)
         {

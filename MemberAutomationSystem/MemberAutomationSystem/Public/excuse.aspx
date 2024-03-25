@@ -8,7 +8,6 @@
       <h4>  Mazeret</h4>
     </div>
   </div>
- 
  <div class="row">
     <div class="col">
         <ul>
@@ -17,25 +16,11 @@
                         <li> <asp:TextBox ID="txt_name" runat="server" Width="225px" placeholder="Personel Adı"></asp:TextBox> </li>
                         <li> <asp:TextBox ID="txt_surname" runat="server" Width="225px" placeholder="Personel Soyadı"></asp:TextBox> </li>
                          <li> <asp:TextBox ID="txt_excuse" runat="server" Width="250px" Height="100px" placeholder="Mazeret" TextMode="MultiLine"  style="" ></asp:TextBox> </li>
-
                         <li><asp:Button ID="btn_excuse_add" runat="server" Text="Mazeret Ekle" Width="198px" OnClick="btn_excuse_click" CssStyle="btn-success" Font-Bold="True"/> </li>
                         <li> <asp:Label ID="lbl_warning" runat="server" ForeColor="#FF3300" Visible="False"></asp:Label> </li>
-                        
-                
-
-
         </ul>
-
-       
     </div>
-     
-     
   </div>
-    
-         
-       
-  
-
     <div class="row" style="margin-top:15px">
     <div class="col">
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataSourceID="ObjectDataSource1" GridLines="None" style="margin:auto">
