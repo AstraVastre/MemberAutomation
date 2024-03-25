@@ -82,6 +82,7 @@
     <Content Include="images\icon.png" />
     <Content Include="images\iphone.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\logo_icon.png" />
     <Content Include="images\profile-picture-one.jpg" />
     <Content Include="index.html" />
     <Content Include="login.aspx" />

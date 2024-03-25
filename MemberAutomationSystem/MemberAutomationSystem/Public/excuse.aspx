@@ -16,9 +16,9 @@
                         <li> <asp:TextBox ID="txt_tcno" runat="server" Width="225px" placeholder="Personel Tc No"></asp:TextBox> </li> 
                         <li> <asp:TextBox ID="txt_name" runat="server" Width="225px" placeholder="Personel Adı"></asp:TextBox> </li>
                         <li> <asp:TextBox ID="txt_surname" runat="server" Width="225px" placeholder="Personel Soyadı"></asp:TextBox> </li>
-                         <li> <asp:TextBox ID="txt_excuse" runat="server" Width="250px" Height="100px" placeholder="Mazeret" TextMode="MultiLine" style="" ></asp:TextBox> </li>
+                         <li> <asp:TextBox ID="txt_excuse" runat="server" Width="250px" Height="100px" placeholder="Mazeret" TextMode="MultiLine"  style="" ></asp:TextBox> </li>
 
-                        <li><asp:Button ID="btn_excuse_add" runat="server" Text="Mazeret Ekle" Width="198px" OnClick="btn_excuse_click" CssClass="btn-success" Font-Bold="True" /> </li>
+                        <li><asp:Button ID="btn_excuse_add" runat="server" Text="Mazeret Ekle" Width="198px" OnClick="btn_excuse_click" CssStyle="btn-success" Font-Bold="True"/> </li>
                         <li> <asp:Label ID="lbl_warning" runat="server" ForeColor="#FF3300" Visible="False"></asp:Label> </li>
                         
                 

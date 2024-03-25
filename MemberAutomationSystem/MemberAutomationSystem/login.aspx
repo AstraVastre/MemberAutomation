@@ -32,7 +32,7 @@
 <div class="wrap-login100 p-t-190 p-b-30">
 <form class="login100-form validate-form">
 <div class="login100-form-avatar">
-<img src="images/icon.png" alt="PHOTO">
+<img src="images/icon.png" alt="PHOTO"  width="60px">
 </div>
 <span class="login100-form-title p-t-20 p-b-45">
 Siber Isparta Gençlik Merkezi

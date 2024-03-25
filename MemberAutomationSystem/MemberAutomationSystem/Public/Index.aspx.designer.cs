@@ -15,6 +15,15 @@ namespace MemberAutomationSystem.Public
     {
 
         /// <summary>
+        /// DropDownList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+
+        /// <summary>
         /// txt_name control.
         /// </summary>
         /// <remarks>
@@ -42,15 +51,6 @@ namespace MemberAutomationSystem.Public
         protected global::System.Web.UI.WebControls.TextBox txt_tcno;
 
         /// <summary>
-        /// txt_doBirth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_doBirth;
-
-        /// <summary>
         /// btn_save control.
         /// </summary>
         /// <remarks>
@@ -58,6 +58,15 @@ namespace MemberAutomationSystem.Public
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_save;
+
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
         /// lbl_warning control.
