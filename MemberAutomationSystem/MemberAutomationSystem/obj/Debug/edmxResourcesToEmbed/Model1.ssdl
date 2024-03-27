@@ -16,6 +16,7 @@
     <Property Name="surname" Type="varchar" MaxLength="50" />
     <Property Name="Tc_No" Type="varchar" MaxLength="50" />
     <Property Name="authority_type_Id" Type="int" />
+    <Property Name="password" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="check_In_Out">
     <Key>
@@ -63,7 +64,7 @@
     <Property Name="Tc_No" Type="varchar" MaxLength="50" />
     <Property Name="date_Of_Birth" Type="nvarchar" MaxLength="50" />
     <Property Name="is_Active" Type="bit" />
-    <Property Name="member_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="member_No" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="Months">
     <Key>

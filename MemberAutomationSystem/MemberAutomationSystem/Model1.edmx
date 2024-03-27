@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MemberAutomationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MemberAutomationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="authority">
           <Key>
             <PropertyRef Name="authority_Id" />
@@ -21,6 +21,7 @@
           <Property Name="surname" Type="varchar" MaxLength="50" />
           <Property Name="Tc_No" Type="varchar" MaxLength="50" />
           <Property Name="authority_type_Id" Type="int" />
+          <Property Name="password" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="check_In_Out">
           <Key>
@@ -68,7 +69,7 @@
           <Property Name="Tc_No" Type="varchar" MaxLength="50" />
           <Property Name="date_Of_Birth" Type="nvarchar" MaxLength="50" />
           <Property Name="is_Active" Type="bit" />
-          <Property Name="member_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="member_No" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Months">
           <Key>
@@ -162,8 +163,7 @@
             <End Role="Log" EntitySet="Log" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MemberAutomationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -185,6 +185,7 @@
           <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="authority_type_Id" Type="Int32" />
           <NavigationProperty Name="authority" Relationship="Self.FK_authorityMembers_authority" FromRole="authorityMembers" ToRole="authority" />
+          <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="check_In_Out">
           <Key>
@@ -236,7 +237,7 @@
           <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="date_Of_Birth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="is_Active" Type="Boolean" />
-          <Property Name="member_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="member_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="check_In_Out" Relationship="Self.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
           <NavigationProperty Name="excuse" Relationship="Self.FK_excuse_members" FromRole="members" ToRole="excuse" />
         </EntityType>
@@ -349,6 +350,7 @@
           <EntitySetMapping Name="authorityMembers">
             <EntityTypeMapping TypeName="MemberAutomationModel.authorityMembers">
               <MappingFragment StoreEntitySet="authorityMembers">
+                <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="authority_member_Id" ColumnName="authority_member_Id" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="surname" ColumnName="surname" />

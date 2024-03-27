@@ -19,6 +19,7 @@ namespace MemberAutomationSystem
         public string surname { get; set; }
         public string Tc_No { get; set; }
         public Nullable<int> authority_type_Id { get; set; }
+        public string password { get; set; }
     
         public virtual authority authority { get; set; }
     }

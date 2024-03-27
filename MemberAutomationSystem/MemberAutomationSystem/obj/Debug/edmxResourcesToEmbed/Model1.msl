@@ -12,6 +12,7 @@
     <EntitySetMapping Name="authorityMembers">
       <EntityTypeMapping TypeName="MemberAutomationModel.authorityMembers">
         <MappingFragment StoreEntitySet="authorityMembers">
+          <ScalarProperty Name="password" ColumnName="password" />
           <ScalarProperty Name="authority_member_Id" ColumnName="authority_member_Id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="surname" ColumnName="surname" />

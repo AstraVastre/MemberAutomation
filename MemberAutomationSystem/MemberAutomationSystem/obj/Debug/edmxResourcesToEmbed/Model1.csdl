@@ -18,6 +18,7 @@
     <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="authority_type_Id" Type="Int32" />
     <NavigationProperty Name="authority" Relationship="Self.FK_authorityMembers_authority" FromRole="authorityMembers" ToRole="authority" />
+    <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="check_In_Out">
     <Key>
@@ -69,7 +70,7 @@
     <Property Name="Tc_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="date_Of_Birth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="is_Active" Type="Boolean" />
-    <Property Name="member_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="member_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="check_In_Out" Relationship="Self.FK_check_In_Out_members" FromRole="members" ToRole="check_In_Out" />
     <NavigationProperty Name="excuse" Relationship="Self.FK_excuse_members" FromRole="members" ToRole="excuse" />
   </EntityType>

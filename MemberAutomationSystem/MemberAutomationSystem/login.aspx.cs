@@ -13,5 +13,10 @@ namespace MemberAutomationSystem
         {
 
         }
+
+        protected void btn_signIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
