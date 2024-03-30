@@ -39,6 +39,9 @@
           <li class="nav-item nav-custom-link">
             <a class="nav-link" href="mRegister.aspx">Personel Kayıt<i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
           </li>
+            <li class="nav-item nav-custom-link">
+            <a class="nav-link" href="mReport.aspx">Raporlar<i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li>
          <%-- <li class="nav-item nav-custom-link">
             <a class="nav-link" href="memberTimes.aspx">Personel Çalışma Süreleri<i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
           </li>
