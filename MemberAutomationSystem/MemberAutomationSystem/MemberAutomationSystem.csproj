@@ -140,8 +140,8 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Private\mRegister.aspx" />
-    <Content Include="Private\mReport.aspx" />
     <Content Include="Private\mtimes.aspx" />
+    <Content Include="Private\mReport.aspx" />
     <Content Include="Public\excuse.aspx" />
     <Content Include="Public\index.aspx" />
     <Content Include="Css\style.css" />
@@ -218,13 +218,6 @@
     <Compile Include="Private\mRegister.aspx.designer.cs">
       <DependentUpon>mRegister.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Private\mReport.aspx.cs">
-      <DependentUpon>mReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Private\mReport.aspx.designer.cs">
-      <DependentUpon>mReport.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Private\mtimes.aspx.cs">
       <DependentUpon>mtimes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,6 +231,13 @@
     </Compile>
     <Compile Include="Private\Private.Master.designer.cs">
       <DependentUpon>Private.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Private\mReport.aspx.cs">
+      <DependentUpon>mReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\mReport.aspx.designer.cs">
+      <DependentUpon>mReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -311,7 +311,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

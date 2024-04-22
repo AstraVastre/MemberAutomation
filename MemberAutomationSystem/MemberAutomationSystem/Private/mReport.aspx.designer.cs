@@ -11,7 +11,7 @@ namespace MemberAutomationSystem.Private
 {
 
 
-    public partial class mReport
+    public partial class rapordeneme
     {
 
         /// <summary>

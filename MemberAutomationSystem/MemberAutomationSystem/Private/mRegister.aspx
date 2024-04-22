@@ -16,10 +16,10 @@
  <div class="row">
     <div class="col">
         <ul>
-                        <li> <asp:TextBox ID="txt_name" runat="server" Width="200px" placeholder="Personel Adı" style=""></asp:TextBox> </li>
-                        <li> <asp:TextBox ID="txt_surname" runat="server" Width="200px" placeholder="Personel Soyadı"></asp:TextBox> </li>
-                        <li> <asp:TextBox ID="txt_tcno" runat="server" Width="200px" placeholder="Personel TcNo" TextMode="Number"></asp:TextBox> </li>
-                        <li> <asp:TextBox ID="txt_doBirth" runat="server" Width="200px" placeholder=" Personel Doğum Tarihi" TextMode="Date" ></asp:TextBox> </li>
+                        <li> <asp:TextBox ID="txt_name" runat="server" Width="200px" placeholder="Personel Adı" style="border-radius:10px 10px;"></asp:TextBox> </li>
+                        <li> <asp:TextBox ID="txt_surname" runat="server" Width="200px" placeholder="Personel Soyadı" style="border-radius:10px 10px;"></asp:TextBox> </li>
+                        <li> <asp:TextBox ID="txt_tcno" runat="server" Width="200px" placeholder="Personel TcNo" TextMode="Number" style="border-radius:10px 10px;"></asp:TextBox> </li>
+                        <li> <asp:TextBox ID="txt_doBirth" runat="server" Width="200px" placeholder=" Personel Doğum Tarihi" TextMode="Date" style="border-radius:10px 10px;"></asp:TextBox> </li>
                         <li><asp:Button ID="btn_save" runat="server" Text="Kaydet" Width="100px" CssClass="btn-success"  Font-Bold="True" style="border-radius:15px 15px"/> </li>
                         <li> <asp:Label ID="lbl_warning" runat="server" ForeColor="#FF3300" Visible="False"></asp:Label> </li>
         </ul>
