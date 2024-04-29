@@ -560,7 +560,11 @@ pre {
     margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
-    width: 100%
+    width: 100%;
+    background-image:url(../../../../images/result.png);
+    background-size:cover;
+    
+    
 }
 
 @media (min-width:576px) {

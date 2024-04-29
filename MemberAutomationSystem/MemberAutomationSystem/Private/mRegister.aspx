@@ -65,15 +65,15 @@
     </div>
   </div>
 
-    <script>
+<%--    <script>
 
-        window.addEventListener('resize', function (event) {
-            var gridView = document.getElementById('<%= GridView1.ClientID %>');
-            if (gridView) {
-                var parentWidth = gridView.parentElement.clientWidth;
-                gridView.style.width = parentWidth + 'px';
+        window.addeventlistener('resize', function (event) {
+            var gridview = document.getelementbyıd('<%= GridView1.ClientID %>');
+            if (gridview) {
+                var parentwidth = gridview.parentelement.clientwidth;
+                gridview.style.width = parentwidth + 'px';
             }
         });
 
-    </script>
+    </script>--%>
 </asp:Content>

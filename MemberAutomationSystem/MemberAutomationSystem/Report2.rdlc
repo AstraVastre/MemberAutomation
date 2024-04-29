@@ -6,30 +6,30 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.92883cm</Width>
+              <Width>3.14352cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.92883cm</Width>
+              <Width>3.14352cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.92883cm</Width>
+              <Width>3.14352cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.71469cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.71469cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.71469cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.71469cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.68467cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -300,7 +300,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.68467cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -560,9 +560,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>1.45203cm</Top>
-        <Left>3.8862cm</Left>
-        <Height>1.2cm</Height>
-        <Width>18.78649cm</Width>
+        <Left>4.6654cm</Left>
+        <Height>1.36933cm</Height>
+        <Width>20.28932cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -570,13 +570,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.40833in</Height>
+    <Height>2.41666in</Height>
     <Style />
   </Body>
-  <Width>9.69293in</Width>
+  <Width>10.15126in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>2.36361cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -587,7 +587,22 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Siber Isparta Gençlik Merkezi Rapor</Value>
+                  <Value>Siber Isparta Gençlik Merkezi </Value>
+                  <Style>
+                    <FontFamily>Times New Roman</FontFamily>
+                    <FontSize>20pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Rapor</Value>
                   <Style>
                     <FontFamily>Times New Roman</FontFamily>
                     <FontSize>20pt</FontSize>
@@ -601,10 +616,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.37253cm</Top>
-          <Left>7.71737cm</Left>
-          <Height>1.99108cm</Height>
-          <Width>8.7865cm</Width>
+          <Left>6.89187cm</Left>
+          <Height>2.36361cm</Height>
+          <Width>16.74517cm</Width>
           <Style>
             <Border>
               <Style>None</Style>

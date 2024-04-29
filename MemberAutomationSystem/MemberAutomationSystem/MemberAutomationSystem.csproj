@@ -105,6 +105,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\logo_icon.png" />
     <Content Include="images\profile-picture-one.jpg" />
+    <Content Include="images\result.png" />
     <Content Include="index.html" />
     <Content Include="login.aspx" />
     <Content Include="login_page\css\main.css" />
